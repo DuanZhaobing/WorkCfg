@@ -1,0 +1,938 @@
+{
+    "services": [
+        {
+            "enable": true,
+            "id": "0x10",
+            "name": "诊断会话控制",
+            "subitems": [
+                {
+                    "data": "",
+                    "desc": "默认会话",
+                    "isIdInvalid": false,
+                    "number": "0x01"
+                },
+                {
+                    "data": "",
+                    "desc": "编程会话",
+                    "isIdInvalid": false,
+                    "number": "0x02"
+                },
+                {
+                    "data": "",
+                    "desc": "扩展诊断会话",
+                    "isIdInvalid": false,
+                    "number": "0x03"
+                },
+                {
+                    "data": "",
+                    "desc": "安全系统诊断会话",
+                    "isIdInvalid": false,
+                    "number": "0x04"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x11",
+            "name": "ECU重置",
+            "subitems": [
+                {
+                    "data": "",
+                    "desc": "硬重置",
+                    "isIdInvalid": false,
+                    "number": "0x01"
+                },
+                {
+                    "data": "",
+                    "desc": "点火钥匙关闭/重置",
+                    "isIdInvalid": false,
+                    "number": "0x02"
+                },
+                {
+                    "data": "",
+                    "desc": "软重置",
+                    "isIdInvalid": false,
+                    "number": "0x03"
+                },
+                {
+                    "data": "",
+                    "desc": "启动快速断电",
+                    "isIdInvalid": false,
+                    "number": "0x04"
+                },
+                {
+                    "data": "",
+                    "desc": "禁用快速断电",
+                    "isIdInvalid": false,
+                    "number": "0x05"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x14",
+            "name": "清除诊断信息",
+            "subitems": [
+                {
+                    "data": "FF FF FF",
+                    "desc": "清除所有DTC",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x19",
+            "name": "读取DTC信息",
+            "subitems": [
+                {
+                    "data": "FF",
+                    "desc": "按状态掩码报告DTC数量",
+                    "isIdInvalid": false,
+                    "number": "0x01"
+                },
+                {
+                    "data": "FF",
+                    "desc": "按状态掩码报告DTC",
+                    "isIdInvalid": false,
+                    "number": "0x02"
+                },
+                {
+                    "data": "",
+                    "desc": "报告DTC快照标识",
+                    "isIdInvalid": false,
+                    "number": "0x03"
+                },
+                {
+                    "data": "",
+                    "desc": "按DTC编号报告DTC快照记录",
+                    "isIdInvalid": false,
+                    "number": "0x04"
+                },
+                {
+                    "data": "",
+                    "desc": "按记录编号报告DTC存储数据",
+                    "isIdInvalid": false,
+                    "number": "0x05"
+                },
+                {
+                    "data": "",
+                    "desc": "按DTC编号报告DTC扩展数据记录",
+                    "isIdInvalid": false,
+                    "number": "0x06"
+                },
+                {
+                    "data": "",
+                    "desc": "按严重性掩码记录报告DTC编号",
+                    "isIdInvalid": false,
+                    "number": "0x07"
+                },
+                {
+                    "data": "",
+                    "desc": "按严重性掩码记录报告DTC",
+                    "isIdInvalid": false,
+                    "number": "0x08"
+                },
+                {
+                    "data": "",
+                    "desc": "报告DTC的严重性信息",
+                    "isIdInvalid": false,
+                    "number": "0x09"
+                },
+                {
+                    "data": "",
+                    "desc": "报告受支持的DTC",
+                    "isIdInvalid": false,
+                    "number": "0x0A"
+                },
+                {
+                    "data": "",
+                    "desc": "报告首个测试失败DTC",
+                    "isIdInvalid": false,
+                    "number": "0x0B"
+                },
+                {
+                    "data": "",
+                    "desc": "报告首个确认DTC",
+                    "isIdInvalid": false,
+                    "number": "0x0C"
+                },
+                {
+                    "data": "",
+                    "desc": "报告最新测试失败DTC",
+                    "isIdInvalid": false,
+                    "number": "0x0D"
+                },
+                {
+                    "data": "",
+                    "desc": "报告最新确认的DTC",
+                    "isIdInvalid": false,
+                    "number": "0x0E"
+                },
+                {
+                    "data": "",
+                    "desc": "按状态掩码报告镜像内存DTC",
+                    "isIdInvalid": false,
+                    "number": "0x0F"
+                },
+                {
+                    "data": "",
+                    "desc": "按DTC编号报告镜像内存DTC扩展数据记录",
+                    "isIdInvalid": false,
+                    "number": "0x10"
+                },
+                {
+                    "data": "",
+                    "desc": "按状态掩码报告镜像内存DTC数量",
+                    "isIdInvalid": false,
+                    "number": "0x11"
+                },
+                {
+                    "data": "",
+                    "desc": "按状态掩码报告排放OBD DTC的数量",
+                    "isIdInvalid": false,
+                    "number": "0x12"
+                },
+                {
+                    "data": "",
+                    "desc": "按报告掩码报告排放OBD DTC",
+                    "isIdInvalid": false,
+                    "number": "0x13"
+                },
+                {
+                    "data": "",
+                    "desc": "报告DTC故障检测计时器",
+                    "isIdInvalid": false,
+                    "number": "0x14"
+                },
+                {
+                    "data": "",
+                    "desc": "报告为永久性状态的DTC",
+                    "isIdInvalid": false,
+                    "number": "0x15"
+                },
+                {
+                    "data": "",
+                    "desc": "按记录编号报告DTC扩展数据记录",
+                    "isIdInvalid": false,
+                    "number": "0x16"
+                },
+                {
+                    "data": "",
+                    "desc": "按状态掩码报告用户定义内存",
+                    "isIdInvalid": false,
+                    "number": "0x17"
+                },
+                {
+                    "data": "",
+                    "desc": "按DTC编号报告用户定义内存DTC快照记录",
+                    "isIdInvalid": false,
+                    "number": "0x18"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x22",
+            "name": "按标识符读取数据",
+            "subitems": [
+                {
+                    "data": "F1 86",
+                    "desc": "当前诊断会话模式",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 87",
+                    "desc": "零部件代码",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 88",
+                    "desc": "ECU应用软件号",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 8A",
+                    "desc": "系统供应商名称",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 8B",
+                    "desc": "ECU制造日期标识符",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 8C",
+                    "desc": "ECU序列号数据标识符",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 90",
+                    "desc": "VIN数据标识符",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 91",
+                    "desc": "ECU硬件号",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 93",
+                    "desc": "硬件版本号数据标识符",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 95",
+                    "desc": "软件版本号数据标识符",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 97",
+                    "desc": "ECU系统名称",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 99",
+                    "desc": "软件编程日期",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 9D",
+                    "desc": "Date of Last ABM Service",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 10",
+                    "desc": "网络配置字",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 01",
+                    "desc": "功能配置字",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "FA 13",
+                    "desc": "读取碰撞信息1",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "FA 14",
+                    "desc": "读取碰撞信息2",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "FA 15",
+                    "desc": "读取碰撞信息3",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 10",
+                    "desc": "EDR记录状态",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 13",
+                    "desc": "ACU碰撞数据(最近一次发生的事件)",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 14",
+                    "desc": "ACU碰撞数据(倒数第二次发生的事件)",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 15",
+                    "desc": "ACU碰撞数据(倒数第三次发生的事件)",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 16",
+                    "desc": "ACU前向Crash碰撞数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 17",
+                    "desc": "ACU前向Near Crash碰撞数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 18",
+                    "desc": "ACU侧向Crash碰撞数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 19",
+                    "desc": "ACU侧向Near Crash碰撞数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 32",
+                    "desc": "清除生产数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 33",
+                    "desc": "激活/禁用内部服务",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 41",
+                    "desc": "读取SMT生产测试数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 43",
+                    "desc": "读取烧录程序生产测试数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 45",
+                    "desc": "读取老化测试生产测试数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 47",
+                    "desc": "读取滑台测试生产测试数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 49",
+                    "desc": "读取全功能测试生产测试数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 50",
+                    "desc": "通道数配置信息",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 51",
+                    "desc": "读取故障类型",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 52",
+                    "desc": "点火回路阻值",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "00",
+                    "desc": "加密状态",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "08 01",
+                    "desc": "Input/Output value",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x23",
+            "name": "按地址读取内容",
+            "subitems": [
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x24",
+            "name": "按标识符读取换算数据",
+            "subitems": [
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x27",
+            "name": "安全访问",
+            "subitems": [
+                {
+                    "data": "",
+                    "desc": "请求Seed 1",
+                    "isIdInvalid": false,
+                    "number": "0x01"
+                },
+                {
+                    "data": "",
+                    "desc": "发送Key 2",
+                    "isIdInvalid": false,
+                    "number": "0x02"
+                },
+                {
+                    "data": "",
+                    "desc": "请求Seed 3",
+                    "isIdInvalid": false,
+                    "number": "0x03"
+                },
+                {
+                    "data": "",
+                    "desc": "发送Key 4",
+                    "isIdInvalid": false,
+                    "number": "0x04"
+                },
+                {
+                    "data": "",
+                    "desc": "请求Seed 5",
+                    "isIdInvalid": false,
+                    "number": "0x05"
+                },
+                {
+                    "data": "",
+                    "desc": "发送Key 6",
+                    "isIdInvalid": false,
+                    "number": "0x06"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x28",
+            "name": "通讯控制",
+            "subitems": [
+                {
+                    "data": "01",
+                    "desc": "启用Rx和Tx",
+                    "isIdInvalid": false,
+                    "number": "0x00"
+                },
+                {
+                    "data": "01",
+                    "desc": "启动Rx和禁用Tx",
+                    "isIdInvalid": false,
+                    "number": "0x01"
+                },
+                {
+                    "data": "01",
+                    "desc": "禁用Rx和启用Tx",
+                    "isIdInvalid": false,
+                    "number": "0x02"
+                },
+                {
+                    "data": "01",
+                    "desc": "禁用Rx和Tx",
+                    "isIdInvalid": false,
+                    "number": "0x03"
+                },
+                {
+                    "data": "",
+                    "desc": "根据强化的地址信息启用Rx和禁用Tx",
+                    "isIdInvalid": false,
+                    "number": "0x04"
+                },
+                {
+                    "data": "",
+                    "desc": "根据强化的地址信息启用Rx和Tx",
+                    "isIdInvalid": false,
+                    "number": "0x05"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x2A",
+            "name": "按周期性标识符读取数据",
+            "subitems": [
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x2C",
+            "name": "动态定义数据标识符",
+            "subitems": [
+                {
+                    "data": "",
+                    "desc": "按标识符定义",
+                    "isIdInvalid": false,
+                    "number": "0x01"
+                },
+                {
+                    "data": "",
+                    "desc": "按内存地址定义",
+                    "isIdInvalid": false,
+                    "number": "0x02"
+                },
+                {
+                    "data": "",
+                    "desc": "清除动态定义的数据标识符",
+                    "isIdInvalid": false,
+                    "number": "0x03"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x2E",
+            "name": "按标识符写数据",
+            "subitems": [
+                {
+                    "data": "02 31 02 01 01",
+                    "desc": "碰撞事件软件模拟",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 32 01 55",
+                    "desc": "清除EDR数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 32 02 55",
+                    "desc": "清除ACU数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 32 03 55",
+                    "desc": "清除计数器数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 33 01 55",
+                    "desc": "激活/禁用内部服务",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 41 01 55",
+                    "desc": "写入SMT生产测试数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 43 01 55",
+                    "desc": "写入烧录程序生产测试数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 45 01 55",
+                    "desc": "写入老化测试生产测试数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 47 01 55",
+                    "desc": "写入滑台测试生产测试数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 49 01 55",
+                    "desc": "写入全功能测试生产测试数据",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "02 70 00 55",
+                    "desc": "解密",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 87",
+                    "desc": "OEM Part Number",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 8B",
+                    "desc": "ECU制造日期标识符",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 8C",
+                    "desc": "ECU序列号标识符",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 90",
+                    "desc": "VIN数据标识符",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 99",
+                    "desc": "编程日期",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 9D",
+                    "desc": "ABM服务日期",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 01",
+                    "desc": "网络配置字",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 01 01",
+                    "desc": "功能配置字(正常模式)",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 01 02",
+                    "desc": "功能配置字(工厂模式）",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "F1 00",
+                    "desc": "Clear Crash Records",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                },
+                {
+                    "data": "50 78",
+                    "desc": "End Of Line",
+                    "isIdInvalid": true,
+                    "number": "0x00"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x2F",
+            "name": "按标识符的输入输出控制",
+            "subitems": [
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x31",
+            "name": "例程控制",
+            "subitems": [
+                {
+                    "data": "",
+                    "desc": "启动例程",
+                    "isIdInvalid": false,
+                    "number": "0x01"
+                },
+                {
+                    "data": "",
+                    "desc": "停止例程",
+                    "isIdInvalid": false,
+                    "number": "0x02"
+                },
+                {
+                    "data": "",
+                    "desc": "请求例程结果",
+                    "isIdInvalid": false,
+                    "number": "0x03"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x34",
+            "name": "文件下载",
+            "subitems": [
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x3D",
+            "name": "按地址写内存",
+            "subitems": [
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x3E",
+            "name": "",
+            "subitems": [
+                {
+                    "data": "",
+                    "desc": "",
+                    "isIdInvalid": false,
+                    "number": "0x00"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x83",
+            "name": "访问计时参数",
+            "subitems": [
+                {
+                    "data": "",
+                    "desc": "读取扩展的计时参数集",
+                    "isIdInvalid": false,
+                    "number": "0x01"
+                },
+                {
+                    "data": "",
+                    "desc": "计时参数设置为默认值",
+                    "isIdInvalid": false,
+                    "number": "0x02"
+                },
+                {
+                    "data": "",
+                    "desc": "读取当前活动的计时参数",
+                    "isIdInvalid": false,
+                    "number": "0x03"
+                },
+                {
+                    "data": "",
+                    "desc": "计时参数设置为指定值",
+                    "isIdInvalid": false,
+                    "number": "0x04"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x84",
+            "name": "受保护的数据传输",
+            "subitems": [
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x85",
+            "name": "控制DTC设置",
+            "subitems": [
+                {
+                    "data": "",
+                    "desc": "开",
+                    "isIdInvalid": false,
+                    "number": "0x01"
+                },
+                {
+                    "data": "",
+                    "desc": "关",
+                    "isIdInvalid": false,
+                    "number": "0x02"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x86",
+            "name": "基于事件响应",
+            "subitems": [
+                {
+                    "data": "",
+                    "desc": "停止基于事件响应",
+                    "isIdInvalid": false,
+                    "number": "0x00"
+                },
+                {
+                    "data": "",
+                    "desc": "关于DTC状态更改",
+                    "isIdInvalid": false,
+                    "number": "0x01"
+                },
+                {
+                    "data": "",
+                    "desc": "关于计时器中断",
+                    "isIdInvalid": false,
+                    "number": "0x02"
+                },
+                {
+                    "data": "",
+                    "desc": "关于数据标识符更改",
+                    "isIdInvalid": false,
+                    "number": "0x03"
+                },
+                {
+                    "data": "",
+                    "desc": "报告激活事件",
+                    "isIdInvalid": false,
+                    "number": "0x04"
+                },
+                {
+                    "data": "",
+                    "desc": "启动基于事件响应",
+                    "isIdInvalid": false,
+                    "number": "0x05"
+                },
+                {
+                    "data": "",
+                    "desc": "清除基于事件响应",
+                    "isIdInvalid": false,
+                    "number": "0x06"
+                },
+                {
+                    "data": "",
+                    "desc": "关于值对比",
+                    "isIdInvalid": false,
+                    "number": "0x07"
+                }
+            ]
+        },
+        {
+            "enable": true,
+            "id": "0x87",
+            "name": "链路控制",
+            "subitems": [
+                {
+                    "data": "",
+                    "desc": "验证能否使用固定参数进行模式转换",
+                    "isIdInvalid": false,
+                    "number": "0x01"
+                },
+                {
+                    "data": "",
+                    "desc": "验证能否使用特定参数进行模式转换",
+                    "isIdInvalid": false,
+                    "number": "0x02"
+                },
+                {
+                    "data": "",
+                    "desc": "转换模式",
+                    "isIdInvalid": false,
+                    "number": "0x03"
+                }
+            ]
+        }
+    ]
+}
