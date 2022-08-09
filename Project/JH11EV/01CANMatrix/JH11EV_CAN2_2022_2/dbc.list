@@ -1,0 +1,173 @@
+{
+    "dbcFile": "JH11EV_CAN2_2022.01.06 - 副本.dbc",
+    "j1939DA": "FF",
+    "j1939SA": "00",
+    "msgList": [
+        {
+            "canType": 0,
+            "datas": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "e2eDataId": "0",
+            "e2eEnable": false,
+            "msgEnable": true,
+            "msgID": 196,
+            "msgName": "SAM_1",
+            "sendCnt": -1,
+            "sendInterval": 10
+        },
+        {
+            "canType": 0,
+            "datas": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "e2eDataId": "0",
+            "e2eEnable": false,
+            "msgEnable": true,
+            "msgID": 1283,
+            "msgName": "GW_ABS_10",
+            "sendCnt": -1,
+            "sendInterval": 20
+        },
+        {
+            "canType": 0,
+            "datas": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "e2eDataId": "0",
+            "e2eEnable": false,
+            "msgEnable": true,
+            "msgID": 1313,
+            "msgName": "TBOX_2",
+            "sendCnt": -1,
+            "sendInterval": 100
+        },
+        {
+            "canType": 0,
+            "datas": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "e2eDataId": "0",
+            "e2eEnable": false,
+            "msgEnable": true,
+            "msgID": 745,
+            "msgName": "GW_ABS_1",
+            "sendCnt": -1,
+            "sendInterval": 10
+        },
+        {
+            "canType": 0,
+            "datas": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "e2eDataId": "0",
+            "e2eEnable": false,
+            "msgEnable": true,
+            "msgID": 913,
+            "msgName": "BCM_1",
+            "sendCnt": -1,
+            "sendInterval": 20
+        },
+        {
+            "canType": 0,
+            "datas": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "e2eDataId": "0",
+            "e2eEnable": false,
+            "msgEnable": true,
+            "msgID": 1027,
+            "msgName": "GW_VCU_1",
+            "sendCnt": -1,
+            "sendInterval": 100
+        },
+        {
+            "canType": 0,
+            "datas": [
+                7,
+                208,
+                78,
+                32,
+                78,
+                32,
+                40,
+                40
+            ],
+            "e2eDataId": "0",
+            "e2eEnable": false,
+            "msgEnable": true,
+            "msgID": 1040,
+            "msgName": "GW_MCU_1",
+            "sendCnt": -1,
+            "sendInterval": 10
+        },
+        {
+            "canType": 0,
+            "datas": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "e2eDataId": "0",
+            "e2eEnable": false,
+            "msgEnable": true,
+            "msgID": 1120,
+            "msgName": "GW_VCU_3",
+            "sendCnt": -1,
+            "sendInterval": 100
+        }
+    ],
+    "protocol": 1,
+    "sendLoopCnt": 1,
+    "sendLoopInterval": 1000,
+    "sendMode": 0,
+    "sendSpeed": 6,
+    "transFailMode": 1
+}

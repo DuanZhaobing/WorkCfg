@@ -1,0 +1,1102 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS VCU
+VAL_TABLE_ DC1_WorkingMode 4 "Sleep" 3 "fault" 2 "charge finish" 1 "charging" 0 "Standby" ;
+VAL_TABLE_ DC1_PDUSts 1 "Connect" 0 "Disconnect" ;
+VAL_TABLE_ DC1_Faultcode 4 "DC电源故障" 3 "DC电源与BMS控制板通信故障" 2 "Bms控制板主板故障" 1 "Bms控制板can通信故障" 0 "无故障" ;
+VAL_TABLE_ DC1_ChgConnectSts 1 "Connect" 0 "Disconnect" ;
+VAL_TABLE_ DC1_CurrentFailSts 1 "failIsPresentinTheSystemMemory" 0 "No functional fail is present" ;
+VAL_TABLE_ ActiveLoadMaster 1 "Active loads in master" 0 "No active loads in master" ;
+VAL_TABLE_ NetworkCommand 3 "Multimaster" 2 "Not Used" 1 "SA" 0 "WU" ;
+VAL_TABLE_ AlarmMode 5 "后备箱释放模式" 4 "设防失效模式" 3 "解除非法闯入模式" 2 "非法闯入模式" 1 "设防模式" 0 "解防模式" ;
+VAL_TABLE_ Arming_Failed 7 "电源不工作于OFF" 3 "后背门开" 2 "右前车门开" 1 "左前车门开" 0 "不工作" ;
+VAL_TABLE_ FL_WIN_Postion 3 "Open-80%" 2 "80%-Close" 1 "Open" 0 "Closed" ;
+VAL_TABLE_ PosSwitchSts 1 "ON" 0 "OFF" ;
+VAL_TABLE_ RADAR_RadarWorkSts 1 "Active" 0 "Not Active" ;
+VAL_TABLE_ RADAR_RadarDetectSts 2 "Rear Radar detecting" 1 "Front Radar detecting" 0 "No detecting" ;
+VAL_TABLE_ RADAR_AudibleBeepRate 4 "1Hz" 3 "		2Hz" 2 "4Hz" 1 "On" 0 "Off" ;
+VAL_TABLE_ BCM_1_LightSts 1 "Active" 0 "Off" ;
+VAL_TABLE_ FaultCode2 1 "故障" 0 "正常" ;
+VAL_TABLE_ PTCState 3 "Grade 3" 2 "Grade 2" 1 "Grade 1" 0 "OFF" ;
+VAL_TABLE_ CLM_EACReq 1 "ON" 0 "OFF" ;
+VAL_TABLE_ DangerousTirePressureWarning 2 "TPMS Dangerous Warning" 1 "TPMS no Dangerous Warning" 0 "No TPMS Warning" ;
+VAL_TABLE_ TPMS_ResetStatus 3 "Reset Finished" 2 "Reset Failed" 1 "Reset On-going" 0 "Startup/Default" ;
+VAL_TABLE_ TPMS_MalfunctionStatus 1 "TPMS Malfunction" 0 "TPMS no Malfunction" ;
+VAL_TABLE_ TPMS_DeflatedtirePosition 15 "多轮欠压" 9 "请检查轮胎压力" 8 "右后轮欠压" 4 "左后轮欠压" 2 "右前轮欠压" 1 "左前轮欠压" 0 "/" ;
+VAL_TABLE_ TPMS_WarningStatus 1 "TPMS Warning" 0 "No TPMS Warning" ;
+VAL_TABLE_ ActiveLoadMaster 1 "active" 0 "No active" ;
+VAL_TABLE_ NetworkCommand 3 "Multimaster" 2 "S" 1 "SA" 0 "WU" ;
+VAL_TABLE_ SteeringAngleValidData 1 "Not Valid" 0 "Valid" ;
+VAL_TABLE_ SASCalibrated 1 "Calibrated" 0 "Not calibrated" ;
+VAL_TABLE_ SASInit 1 "Initialized" 0 "Not Initialized" ;
+VAL_TABLE_ RecoverableFault 3 "Both DTC present" 2 "ECU don't perform ASPCalibration" 1 "ECU temperaturetoo high" 0 "Default/Start up" ;
+VAL_TABLE_ EPSFailSts 2 "Not Recoverable fault" 1 "Recoverable fault" 0 "No fault" ;
+VAL_TABLE_ BCM_1KeySts 3 "START" 2 "ON" 1 "ACC" 0 "OFF" ;
+VAL_TABLE_ OBC_OverTemp 2 "Over Temperature 2 " 1 "Over Temperature 1 " 0 "Not fault " ;
+VAL_TABLE_ OBC_HighVoltOutputUnderVolt 1 "Fault" 0 "Not fault" ;
+VAL_TABLE_ OBC_State 6 "Sleep" 5 "Heating" 4 "ChagerFault" 3 "Charge Over" 2 "Charging" 1 "Standby" 0 "Initalization" ;
+VAL_TABLE_ DriverSeatBeltWarningSts 1 "Warning" 0 "Not warning" ;
+VAL_TABLE_ BMS_bTmalRunFlt 1 "故障" 0 "正常" ;
+VAL_TABLE_ BMS_CellUnderTempSts 4 "四级故障" 3 "三级故障" 2 "二级故障" 1 "一级故障" 0 "正常" ;
+VAL_TABLE_ BMS_BatteryFanSts 3 "Description for the value '0x3'" 2 "Defective" 1 "On" 0 "Off" ;
+VAL_TABLE_ MCU_St_Work 8 "保留" 7 "下高压状态" 6 "限功率状态" 5 "保留" 4 "保留" 3 "高压" 2 "准备状态" 1 "复位后默认状态" 0 "/" ;
+VAL_TABLE_ VCU_bHandBrakeSts 1 "ON" 0 "OFF" ;
+VAL_TABLE_ VCU_InterlockSts 1 "Cut off the fault" 0 "Normal" ;
+VAL_TABLE_ VCU_CLM_stPtc 3 "三档" 2 "两档" 1 "一档" ;
+VAL_TABLE_ VCU_stTBOX_Limit 3 "Reserved" 2 "TBOX CAN_ERR" 1 "TBOX Limit" 0 "NO TBOX Limit" ;
+VAL_TABLE_ VCU_bAntiSkid 1 "Valid" 0 "InValid" ;
+VAL_TABLE_ VCU_stPUPDSts 63 "紧急下电时等待下低压" 62 "紧急放电" 61 " 紧急下电请求" 60 " VCU休眠" 55 " 下低压" 50 " 等待下低压" 45 " MCU 放电" 40 " 请求下高压" 35 " 附件下电" 31 " 快速上电" 30 " 等待车辆静止" 25 " 可行驶" 20 " 电池主正、主负吸合" 15 " 预充中" 10 " 请求上高压" 5 "上低压且等待上高压" 0 "初始化" ;
+VAL_TABLE_ VCU_3_ECO_Sts 1 "ON" 0 "OFF" ;
+VAL_TABLE_ VCU_2_MCU_PowerOff 1 "Power off" 0 "Power on" ;
+VAL_TABLE_ VCU_2_MCU_ActiveDiscargeCmd 1 "Active" 0 "OFF" ;
+VAL_TABLE_ VCU_2_MCUEnable 1 "Enable" 0 "Disable" ;
+VAL_TABLE_ VCU_1_Brake_state 1 "Braking" 0 "Not braking" ;
+VAL_TABLE_ VCU_1_Remote_EAC_COMFault 1 "Fault present" 0 "Fault not present" ;
+VAL_TABLE_ VCU_1_Remote_EAC_SystemFault 1 "Fault present" 0 "Fault not present" ;
+VAL_TABLE_ VCU_1_CrashOutputSts 1 "Crash" 0 "No crash" ;
+VAL_TABLE_ VCU_1_SystemFaultsWarnLightSts 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_TABLE_ VCU_1_Battery12V_Fault 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_TABLE_ VCU_1_MaintainLightSts 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_TABLE_ VCU_1_READYLightSts 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_TABLE_ VCU_1_SOCWarningLightSts 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_TABLE_ VCU_1_MInvertorOTWarnLightSts 1 "Lamp OFF" 0 "Lamp OFF" ;
+VAL_TABLE_ VCU_1_PowerBattFaultWarnLightSts 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_TABLE_ VCU_1_GearboxPositionDisplay 15 "Invalid" 14 "Reserved" 13 "Reverse" 12 "Neutral" 11 "Drive" ;
+VAL_TABLE_ VCU_2_ChargeAllow 1 "Charge forbidden" 0 "Charge allowed" ;
+VAL_TABLE_ BMS_8_12vOutputDisable 1 "Disable" 0 "Enable" ;
+VAL_TABLE_ BMS_8_RequestOutputMode 3 "Reserved" 2 "Heating" 1 "charging" 0 "Disconnect" ;
+VAL_TABLE_ BMS_6_InterlockSts 1 "Manfunciton" 0 "Normal" ;
+VAL_TABLE_ BMS_6_BattContFail 1 "Manfunciton" 0 "Normal" ;
+VAL_TABLE_ BMS_6_chgActiveFltCategory 4 "Grade 4" 3 "Grade 3" 2 "Grade 2" 1 "Grade 1" 0 "Default" ;
+VAL_TABLE_ BMS_6_dischgActiveFltCategory 4 "Grade 4" 3 "Grade 3" 2 "Grade 2" 1 "Grade 1" 0 "Default" ;
+VAL_TABLE_ BMS_6_SmaChrgReq 1 "Request" 0 "No Request" ;
+VAL_TABLE_ BMS_6_workingMode 9 "charge heating" 8 "charge finish" 7 "Charging（停车充电）" 6 "Sleep(进入休眠)" 5 "DataWriting （低压下电）" 4 "ShutDown(高压下电)" 3 "Driving（放电行驶）" 2 "Precharging（预充中）" 1 "Waiting（自检完成）" 0 "Initialing(上电自检)" ;
+VAL_TABLE_ BMS_6_PrechargeContSts 3 "Reserved" 2 "Reserved" 1 "Connect" 0 "Disconnect" ;
+VAL_TABLE_ BMS_6_PrechargeSts 3 "PrechargeFailed" 2 "PrechargeSuccess" 1 "Precharging" 0 "Disconnect" ;
+VAL_TABLE_ BMS_6_NegBattContSts 3 "Reserved" 2 "Reserved" 1 "Connect" 0 "Disconnect" ;
+VAL_TABLE_ BMS_6_PosBattContSts 3 "Reserved" 2 "Reserved" 1 "Connect" 0 "Disconnect" ;
+VAL_TABLE_ BMS_6_QUICKChargeSts 3 "Reserved" 2 "Error" 1 "Connect" 0 "Disconnect" ;
+VAL_TABLE_ BMS_6_BMSSts 3 "Reserved" 2 "Reserved" 1 "Ready" 0 "Not ready" ;
+VAL_TABLE_ BMS_1_PowerBattMaintainLightReq 1 "Maintain request" 0 "NO request" ;
+VAL_TABLE_ ABS_2_RRWheelSpeedValidData 1 "Not valid" 0 "Valid" ;
+VAL_TABLE_ ABS_2_RLWheelSpeedValidData 1 "Not valid" 0 "Valid" ;
+VAL_TABLE_ ABS_2_FRWheelSpeedValidData 1 "Not valid" 0 "Valid" ;
+VAL_TABLE_ ABS_2_FLWheelSpeedValidData 1 "Not valid" 0 "Valid" ;
+VAL_TABLE_ ABS_1_VSpeedVSOSigValidData 1 "Not valid" 0 "Valid" ;
+VAL_TABLE_ ABS_1_ABSPresent 1 "Fitted" 0 "Not fitted" ;
+VAL_TABLE_ ABS_1_ABSActive 1 "Active" 0 "Not active" ;
+VAL_TABLE_ ABS_1_ABSFailSts 1 "Fail present (lamp on)" 0 "Not present" ;
+VAL_TABLE_ ABS_1_ESPWLSts 1 "ESP Warning lamp ON" 0 "ESP Warning lamp OFF" ;
+VAL_TABLE_ ABS_1_EBDWLSts 1 "EBD Warning lamp ON" 0 "EBD Warning lamp OFF" ;
+VAL_TABLE_ ABS_1_EBDPresent 1 "Fitted" 0 "Not fitted" ;
+VAL_TABLE_ ABS_1_EBDFailSts 1 "Fail present (lamp on)" 0 "Not present" ;
+VAL_TABLE_ BCM_PsngrDoorSts 1 "Open" 0 "Close" ;
+VAL_TABLE_ BCM_DriverDoorSts 1 "Open" 0 "Close" ;
+VAL_TABLE_ BCM_DriverDoorLockSts 1 "Unlock" 0 "Lock" ;
+VAL_TABLE_ DCDC_faultlevel 2 "2 level fault" 1 "1 level fault" 0 "0 level fault" ;
+VAL_TABLE_ DCDC_Derating 1 "ON" 0 "OFF" ;
+VAL_TABLE_ DCDC_UnderOV 1 "Fault" 0 "No fault" ;
+VAL_TABLE_ DCDC_OverOV 1 "Fault" 0 "No fault" ;
+VAL_TABLE_ DCDC_OverOC 1 "Fault" 0 "No fault" ;
+VAL_TABLE_ DCDC_OverTemp 1 "Fault" 0 "No fault" ;
+VAL_TABLE_ DCDC_stsError 1 "Fault" 0 "No fault" ;
+VAL_TABLE_ DCDC_UnderIV 1 "Fault" 0 "No fault" ;
+VAL_TABLE_ DCDC_OverIV 1 "Fault" 0 "No fault" ;
+VAL_TABLE_ DCDC_CANError 1 "Fault" 0 "No fault" ;
+VAL_TABLE_ DCDC_OperatingMode 3 "Sleep" 2 "Error" 1 "Working" 0 "Standby" ;
+VAL_TABLE_ DriverDoorSts 1 "Open" 0 "Close" ;
+VAL_TABLE_ EAC1_12VBat_UV_Fault 1 "True" 0 "False/Startup" ;
+VAL_TABLE_ DCDC_St 1 "NOT OK" 0 "OK" ;
+VAL_TABLE_ ABS_1_ABSWLSts 1 "ABS Warning lamp ON" 0 "ABS Warning lamp OFF" ;
+VAL_TABLE_ BMS_1_ElecWireCnctLightSts 3 "reserved" 2 "FCM Connect" 1 "CM Connect" 0 "DisConnect/startup" ;
+VAL_TABLE_ BMS_1_PowerBatteryDisconnectWarn 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_TABLE_ BMS_6_ChgMode_for_TBOX 4 "充电完成" 3 "未充电" 2 "行驶充电" 1 "停车充电" 0 "startup/Default" ;
+VAL_TABLE_ BMS_6_RunMode_for_TBOX 1 "ON" 0 "OFF" ;
+VAL_TABLE_ OBC_1_TempSts 1 "Fault" 0 "No fault " ;
+VAL_TABLE_ OBC_3_Faultlevel 4 "4 level fault" 3 "3 level fault" 2 "2 level fault" 1 "1 level fault" 0 "0 level fault" ;
+VAL_TABLE_ OBC_4_CCSts 3 "Connect" 4 "CC to GND" 2 "Half Connect" 1 "No Connect" ;
+VAL_TABLE_ OBC_3_S2Sts 1 "Close" 0 "Open" ;
+VAL_TABLE_ OBC_3_BMSWakeSts 1 "Enable " 0 "Disable/Startup" ;
+VAL_TABLE_ OBC_3_Low12VStatus 1 "Enable " 0 "Disable/Startup " ;
+VAL_TABLE_ OBC_2_SystemSts 6 "Lock Fault " 5 "Recover Fault " 4 "Sleep" 3 "Charge Over " 2 "Charging " 1 "Standby " 0 "initialization" ;
+VAL_TABLE_ OBC_2_ErrorFlag 11 "电磁锁故障" 10 "输出过压" 9 "输出欠压" 8 "PFC欠压" 7 "PFC过压" 6 "输入过压" 5 "输入欠压" 4 "通讯超时" 3 "输出过流" 2 "内部温度过温" 1 "充电口温度过温" ;
+VAL_TABLE_ OBC_1_HWSts 1 "fault" 0 "no fault/startup" ;
+VAL_TABLE_ OBC_ACVoltageSts 1 "fault" 0 "no fault/startup" ;
+VAL_TABLE_ OBC_1_CommOverTime 1 "fault" 0 "no fault/startup" ;
+VAL_TABLE_ OBC_1_BatteryConnectsSts 1 "no connect" 0 "connect/startup" ;
+VAL_TABLE_ OBC_1_CP_Sts 2 "error" 1 "normal" 0 "default/startup" ;
+VAL_TABLE_ VCU3_Faultcode 53 "刹车故障" 52 "单个制动开关故障" 51 "与 ABM 通讯丢失" 50 "与 BCM 通讯丢失" 49 "与 OBC 通讯丢失" 48 "与 EAC 通讯丢失" 47 "水泵驱动故障" 46 "风扇驱动故障" 45 "与 ICM 通信丢失" 44 "TBOX 平台主动限速" 43 "车速故障" 42 "车速警告" 41 "换挡器故障" 40 "MCU 泄放超时" 39 "继电器断开超时" 38 "母线电流过大超时" 37 "快速重启超时" 36 "IGBT Ready 超时" 35 "主正闭合超时" 34 "预充超时" 33 "包外高压互锁故障" 32 "与 TBOX 通讯丢失" 31 "低压主继电器驱动故障" 30 "PTC 加热继电器驱动故障" 29 "DCDC 唤醒驱动故障" 28 "MCU 唤醒驱动故障" 27 "碰撞故障" 26 "真空系统故障" 25 "真空压力过小" 24 "真空压力传感器信号超下限" 23 "真空压力传感器信号超上限" 22 "真空压力传感器电源电压过低" 21 "真空压力传感器电源电压过高" 20 "蒸发皿温度传感器信号超下限" 19 "蒸发皿温度传感器信号超上限" 18 "油门踏板同步性故障" 17 "油门踏板2 信号超下限" 16 "油门踏板2 信号超上限" 15 "油门踏板1 信号超下限" 14 "油门踏板1 信号超上限" 13 "油门传感器2 电源电压过低" 12 "油门传感器2 电源电压过高" 11 "油门传感器1 电源电压过低" 10 "油门传感器1 电源电压过高" 9 "与 DCDC 通信丢失" 8 "与 ABS 通信丢失" 7 "与 BMS 通信丢失" 6 "与 MCU 通信丢失" 5 "CAN 总线 bus off" 4 "电瓶电压故障" 3 "整车三级故障" 2 "整车二级故障" 1 "整车一级故障" 0 "正常" ;
+VAL_TABLE_ OpenClose_ST 1 "Open" 0 "Close" ;
+VAL_TABLE_ TrueFalse_ST 1 "True" 0 "False/Startup" ;
+VAL_TABLE_ VTSig_EAC_DRIVE_REQ 3 "Invalid" 2 "Reserved" 1 "ON" 0 "OFF" ;
+VAL_TABLE_ VTSig_HVEmgy_ST 1 "Emergency" 0 "NO Emergency" ;
+VAL_TABLE_ ONOFF_ST 1 "ON" 0 "OFF" ;
+VAL_TABLE_ VCUControl 3 "Reserved" 2 "Reserved" 1 "Connect" 0 "Disconnect" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ DC1_WorkingMode : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ ParkLightOnWarning : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ FaultCode8 : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ New_Signal_345 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_344 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_343 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_Temp : 0|8@0+ (1,0) [-40|215] "1℃/bit" Vector__XXX
+ SG_ New_Signal_318 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_317 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VacuumPumpSysFaultSts : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ VacuumPumpSysFaultSts : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ IPM_ : 0|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU2BMS_CtrHighVol : 0|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCUDCDC_Status : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCUHvEmgy_Status : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCUVechileSts : 0|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ VCU2MCU_Skid : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved1 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved3 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Reserved2 : 0|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ EAC_ST : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_263 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_262 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_MOTOR_TEMP_SENSOR : 0|1@0- (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_MOTOR_TEMP_SENSOR : 0|1@0- (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_MOTOR_TEMP_SENSOR : 0|1@0- (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 0|12@0+ (1,0) [0|4095] "" Vector__XXX
+ SG_ New_Signal_330 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_329 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_328 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_327 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_325 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_324 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_323 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_10S_Dischg_Power : 0|16@0+ (5,0) [0|327675] "W" Vector__XXX
+ SG_ BMS_30S_Chg_Power : 0|16@0+ (5,0) [0|0] "W" Vector__XXX
+ SG_ BMS_10S_Chg_Power : 0|16@0+ (5,0) [0|0] "W" Vector__XXX
+ SG_ BMS_30S_DisChg_Power : 0|16@0+ (5,0) [0|327675] "W" Vector__XXX
+ SG_ Hld_BMS_WorkingMode : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_315 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_C_LMT : 0|1@0- (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_1_CrashOutputSts : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_1_Remote_EAC_COMFault : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_1_Remote_EAC_SystemFault : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_2_SpeedCommand : 0|16@0+ (1,-20000) [-20000|45535] "" Vector__XXX
+ SG_ VCU_3_ECO_Sts : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_3_MCU_Skid : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_3_DCDC_Temp : 0|8@0+ (1,-48) [0|0] "℃" Vector__XXX
+ SG_ VCU_3_VCU_Failure : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_6_EAC_target_speed : 0|8@0+ (100,0) [0|25500] "RPM" Vector__XXX
+ SG_ OBC_Low12VStatus : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_SystemSts : 0|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VacuumPumpSysFaultSts : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ HandBrakeSts : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Battery12VoltageLevel : 0|8@0+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ DriverDoorSts : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms7_Charger_Outlet_tempSts : 0|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Slow_Charge_Relay_Is_Short : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Quick_Charge_Relay_Is_Short : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Main_Neg_Relay_is_Short : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charge_loop_interlock_Fault : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_3_Bms_SOH : 0|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_3_Bms_Soc : 0|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_IGBT_Ready : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_6_NegBattContSts : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ABS_1_EbdPresent : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ABS_1_EbdWlSts : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ABS_1_EspWlSts : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ABS_1_ABSPresent : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ABS_1_ABSWLSts : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ActiveLoadMaster : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NetworkCommand : 0|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MessageCounter : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ SteeringAngleSpeedValidData : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ SteeringAngleValidData : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ SASCalibrated : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ SASInit : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ SteeringAngleSpeed : 0|8@0+ (4,0) [0|1016] "deg/Sec" Vector__XXX
+ SG_ SteeringAngle : 0|16@0+ (0.0625,-2048) [-2048|2047.9375] "deg" Vector__XXX
+ SG_ MCU_RotarySensorSignal : 0|16@0+ (1,0) [0|4095] "" Vector__XXX
+ SG_ MCU_AC_CInstantaneous : 0|16@0+ (0.1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ MCU_AC_BInstantaneous : 0|16@0+ (0.1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ MCU_AC_AInstantaneous : 0|16@0+ (0.1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ MCU4__MaxAvailPower : 0|10@0+ (1,-511) [-511|512] "kw" Vector__XXX
+ SG_ Pack_UNDERVOLTAGE_FAULT : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ CELL_OVERVOLTAGE_FAULT : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ CELL_VOLTAGESAMPLINGLINE_FAULT : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BAAT_PACKVOLSAMPINGLOOP : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms_CellUnderVoltageSts : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Temperature_Gathering_line_Break : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BATT_TEMPCHANGE_FAULT : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ CHG_CELLOVERTEMP_FAULT : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ CHG_CELLUNDERTEMP_FAULT : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NONCHG_CELLOVERTEMP_FAULT : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ NONCHG_CELLUNDERTEMP_FAULT : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_2_HighestTemp_SensorNum : 0|8@0+ (1,0) [0|200] "" Vector__XXX
+ SG_ BMS_2_LowestTemp_SensorNum : 0|8@0+ (1,0) [0|200] "" Vector__XXX
+ SG_ BMS_2_HighestVoltage_CellNum : 0|8@0+ (1,0) [0|200] "" Vector__XXX
+ SG_ BMS_2_LowestVoltage_CellNum : 0|8@0+ (1,0) [0|200] "" Vector__XXX
+ SG_ BMS_2_MaxBattVoltage : 0|16@0+ (0.05,0) [0|1000] "V" Vector__XXX
+ SG_ BMS_2_MinBattVoltage : 0|16@0+ (0.05,0) [0|1000] "V" Vector__XXX
+ SG_ ABS_2_RRWheelSpeedValidData : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ABS_2_RLWheelSpeedValidData : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ABS_2_RRWheelSpeed : 0|13@0+ (0.0625,0) [0|511.875] "km/h" Vector__XXX
+ SG_ ABS_2_RLWheelSpeed : 0|13@0+ (0.0625,0) [0|511.75] "km/h" Vector__XXX
+ SG_ ABS_2_FRWheelSpeedValidData : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ABS_2_FRWheelSpeed : 0|13@0+ (0.0625,0) [0|511.875] "km/h" Vector__XXX
+ SG_ ABS_2_FLWheelSpeed : 0|13@0+ (0.0625,0) [0|511.875] "km/h" Vector__XXX
+ SG_ ABS_2_FLWheelSpeedValidData : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS34_BattTempSensorNum3 : 0|8@0+ (1,-40) [-40|125] "℃" Vector__XXX
+ SG_ BMS34_BattTempSensorNum2 : 0|8@0+ (1,-40) [0|0] "℃" Vector__XXX
+ SG_ BMS34_BattTempSensorNum1 : 0|8@0+ (1,-40) [0|0] "℃" Vector__XXX
+ SG_ BMS_5_HVBattChrgPwr : 0|12@0+ (0.1,0) [0|320] "KW" Vector__XXX
+ SG_ BMS_5_HVBattDisChgPwr : 0|12@0+ (0.1,0) [0|320] "KW" Vector__XXX
+ SG_ BMS_4_IsoRVal : 0|16@0+ (1,0) [0|65535] "kΩ" Vector__XXX
+ SG_ BMS_4_LowestCellVoltage : 0|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS_4_HighestCellVoltage : 0|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ BMS_4_LowestBattTemp : 0|8@0+ (1,-40) [-40|125] "℃" Vector__XXX
+ SG_ BMS_4_HighestBattTemp : 0|8@0+ (1,-40) [-40|125] "℃" Vector__XXX
+ SG_ MCU_2_DC_link_Voltage : 0|16@0+ (0.1,0) [0|512] "V" Vector__XXX
+ SG_ MCU_2_DC_link_Current : 0|16@0+ (0.1,-1000) [-512|512] "A" Vector__XXX
+ SG_ MCU_2_AC_Valid : 0|16@0+ (1,-32000) [-32000|32000] "A" Vector__XXX
+ SG_ MCU_2_MAXTorque : 0|16@0+ (0.1,-2000) [-300|300] "" Vector__XXX
+ SG_ MCU_bModeError : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_PhaseCurrent_drift : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_CoverProtectionErr : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_AbnormalAlarm : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_TempDisconAlarm : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_bInverterOvertemp : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_3_bPhase_LowVol_H : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_bPhase_LowVol_L : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_HSBiasAlarm : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_bOverSpeed_L : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_bOverVol_Err : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_bsoftCurrent_Err : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_ActiveDischgErr : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_bLosePhase_Err : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_Phase_OverVol_High : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_Phase_OverVol_low : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_MotorResolverErr : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_HW_LV_Err : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_HW_OV_Err : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_HW_OI_Err : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_IGBT_Err : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_MCUMode : 0|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_Driver_bLV : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_bMotorOverTemp : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_Bus_Err : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_Motor_St : 0|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MCU_3_Moter_ERRNum : 0|5@0+ (1,0) [0|31] "" Vector__XXX
+ SG_ MCU_bTempSensor_Error : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MCU_3_MCU_St_Work : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ MCU_3_Fault_Grade : 0|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ MotorAllowMAXSpeed : 0|16@0+ (1,-20000) [-20000|45535] "rpm" Vector__XXX
+ SG_ BMS_bKeepWarmSet : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_BatteryFanSts : 0|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_6_SmaChrgReq : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_PTCSts : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_6_InterlockSts : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_6_BattContFail : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_6_ChgMode_for_TBOX : 0|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_6_RunMode_for_TBOX : 0|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_6_ChgFault_Grade : 0|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_6_DisChgfault_Grade : 0|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_6_PrechargeContSts : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_6_PrechargeSts : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_6_PosBattContSts : 0|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_6_BMSSts : 0|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_6_workingMode : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ BMS_6_TotalFautlCount_N1 : 0|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ EAC1_OPower_DecreaseSpeed_Fault : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EAC1_OPower_Fault : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_435 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1313 TBOX_2: 8 Vector__XXX
+ SG_ TBOX_4GSts : 7|1@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 196 SAM_1: 8 Vector__XXX
+ SG_ CRCCheck : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 796 ABM_1: 4 Vector__XXX
+ SG_ ABM_1_CheckSum : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ ABM_1_CrashOutputSts : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ ABM_1_MessageCounter : 15|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ ABM_1_PsngrSeatBeltWarning : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ ABM_1_DrvSeatBeltRSt : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ ABM1_AirBagFailSts : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 896 DCDC1_1: 8 Vector__XXX
+ SG_ DC1_WorkingMode : 55|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ DC1_Faultcode : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ DC1_ChgConnectSts : 51|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ DC1_PDUSts : 49|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ DC1_ChargingTime : 47|8@0+ (1,0) [0|255] "Min" Vector__XXX
+ SG_ DC1_AverageTemp : 39|8@0+ (1,-40) [-40|125] "℃" Vector__XXX
+ SG_ NTC_AverageTemp : 31|8@0+ (1,-40) [-40|125] "℃" Vector__XXX
+ SG_ DC1_OutputVoltage : 11|12@0+ (0.1,0) [0|400] "V" Vector__XXX
+ SG_ DC1_OutputCurr : 7|12@0+ (0.1,0) [0|400] "A" Vector__XXX
+
+BO_ 1554 NMm_DC1: 2 Vector__XXX
+ SG_ CurrentFailSts : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ActiveLoadMaster : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NCNetworkCommand : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 916 BCM_2: 8 Vector__XXX
+ SG_ AlarmMode : 30|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ Arming_Failed : 27|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ FR_WIN_Postion : 19|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ FL_WIN_Postion : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1088 RADAR_1: 8 Vector__XXX
+ SG_ RADAR_RadarWorkSts : 61|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ RADAR_RadarDetectSts : 63|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ RADAR_AudibleBeepRate : 55|3@0+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 1553 NMm_DCDC: 2 Vector__XXX
+ SG_ ActiveLoadMaster : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NetworkCommand : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1556 NWM_ICM: 2 Vector__XXX
+ SG_ ActiveLoadMaster : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NetworkCommand : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 408 CLM_1: 8 Vector__XXX
+ SG_ FaultCode8 : 30|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EvaporatorTemperature : 47|8@0+ (0.5,-40) [-40|85] "" Vector__XXX
+ SG_ PTC_Temp : 39|8@0+ (1,-40) [-40|215] "℃" Vector__XXX
+ SG_ FaultCode7 : 29|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ FaultCode6 : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ FaultCode5 : 27|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ FaultCode4 : 26|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ FaultCode3 : 25|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ FaultCode2 : 24|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HVAC_max_perm_ACCM_power : 23|8@0+ (0.1,0) [0|10] "kw" Vector__XXX
+ SG_ PTCState : 10|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ CLM_EACReq : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CLM_EAC_CompressorSpdReq : 7|8@0+ (100,0) [1000|6000] "rpm" Vector__XXX
+
+BO_ 1573 NMm_BCM: 2 Vector__XXX
+ SG_ ActiveLoadMaster : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NetworkCommand : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1536 NWM_TBOX: 8 Vector__XXX
+ SG_ ActiveLoadMaster : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ NetworkCommand : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1283 GW_ABS_10: 8 Vector__XXX
+ SG_ DangerousTirePressureWarning : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ TPMS_ResetStatus : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ TPMS_MalfunctionStatus : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ TPMS_DeflatedtirePosition : 4|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ TPMS_WarningStatus : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1282 GW_ABS_G: 8 Vector__XXX
+ SG_ ABS_1_VSpeedVSOSigValidData : 31|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ABS_1_VehicleSpeedVSOSig : 12|13@0+ (0.0625,0) [0|512] "km/h" Vector__XXX
+ SG_ ABS_1_EBDFailSts : 5|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ABS_1_ABSFailSts : 7|1@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1393 OBC_2: 8 Vector__XXX
+ SG_ OBC_Temp : 55|8@0+ (1,0.4) [-40|215] "" Vector__XXX
+ SG_ OBC_CP_Sts : 6|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ OBC_BattConnectSts : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_CommOverTime : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_ACVolageSts : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_TempSts : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_HWSts : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 913 BCM_1: 8 Vector__XXX
+ SG_ PosSwitchSts : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PosLightOnWarning : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ FollowMeTime : 43|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ FrontFogLightSts : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ TrumpetSts : 31|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Trunk_BackDoor_Sts : 30|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LHRdoorSts : 29|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ RHRDoorSts : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PsngrDoorLockSts : 27|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ TrunkDoorLockSts : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DRLSts : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LowBeamSts : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HighBeamSts : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PosLightSts : 11|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LHTurnlightSts : 9|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ RHTurnlightSts : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ KeyPrtBuzzCmd : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ParkLightOnWarning : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_1KeySts : 6|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DriverDoorLockSts : 23|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PsngrDoorSts : 25|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DriverDoorSts : 24|1@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1139 OBC_4: 8 Vector__XXX
+ SG_ OBC_CPDuty : 62|7@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ OBC_ChrgPortTemp1 : 47|8@0+ (1,-40) [-40|215] "℃" Vector__XXX
+ SG_ OBC_ChrgPiletMaxCurr : 19|12@0+ (0.1,0) [0|409.4] "A" Vector__XXX
+ SG_ OBC_ACInputCurrent : 3|12@0+ (0.1,0) [0|409.4] "A" Vector__XXX
+ SG_ OBC_S2Sts : 5|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_BMSWakeSts : 6|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_ChrgPortTemp2 : 55|8@0+ (1,-40) [-40|215] "℃" Vector__XXX
+ SG_ OBC_FaultLevel : 34|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_CC_Sts : 23|3@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1394 OBC_3: 8 Vector__XXX
+ SG_ OBC_BatteryVoltage : 47|16@0+ (0.1,0) [0|6553.5] "v" Vector__XXX
+ SG_ OBC_CurrentLimit : 39|8@0+ (0.1,0) [0|25.5] "A" Vector__XXX
+ SG_ OBC_ACInputVoltage : 7|16@0+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ OBC_PFCVoltage : 23|16@0+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ OBC_ErrorFlag : 63|4@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1136 GW_BMS_9: 7 Vector__XXX
+ SG_ BMS_9_12vOutputDisable : 48|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_9_ChargeTime : 47|10@0+ (1,0) [0|1024] "" Vector__XXX
+ SG_ BMS_9_RequestOutputVoltage : 31|16@0+ (0.05,0) [0|1000] "V" Vector__XXX
+ SG_ BMS_9_RequestOutputCurrent : 15|16@0+ (0.05,0) [0|400] "A" Vector__XXX
+ SG_ BMS_9_RequestOutputMode : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1312 TBOX_1: 8 Vector__XXX
+ SG_ Remote_Control_Lock : 23|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ Checksum : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Remote_Limit_Start : 9|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ StopChargeRequest : 10|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TBOX_PowerSts : 12|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TBOX_GPSSts : 13|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TBOX_4GSts : 14|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Remote_WakeUp : 15|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ IGN_Sts : 7|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Remote_AC_Req : 6|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TBOX_Diag_sts : 5|2@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1072 ICM_1: 8 Vector__XXX
+ SG_ TotalOdometer_km : 43|20@0+ (1,0) [0|999999] "km" Vector__XXX
+ SG_ DriverSeatBeltWarningSts : 25|1@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1137 OBC_1: 8 Vector__XXX
+ SG_ OBC_NoBattery : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_FanFault : 51|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_CANMsgFault : 50|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_HighCurrOutputFault : 49|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_HighVoltOutputUnderVolt : 40|1@0+ (1,0) [0|1] "℃" Vector__XXX
+ SG_ OBC_State : 2|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ OBC_HighVoltOutputShortCircuit : 42|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_InputUnderVolt : 43|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_HighVoltOutputOverVolt : 41|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_InputOverVolt : 44|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_OverTemp : 46|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ OBC_Charge_Current : 15|16@0+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ OBC_Charge_Voltage : 31|16@0+ (0.1,0) [0|1000] "V" Vector__XXX
+
+BO_ 1135 GW_BMS_7: 8 Vector__XXX
+ SG_ BMS_bPowerSupplyLowErr : 63|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_bPowerSupplyHighErr : 62|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS7_bMainSwitchBreakErr : 61|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS7_SingleHeat_timeout : 60|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_bCarStorePowerOverCurr : 59|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS7_VCU_CAN_FAILED : 55|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_bCanBusoff : 54|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_bHeatrelayAdhesionSts : 53|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_bPrerelayAdhesionSts : 52|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BMS_bMainRelayAdhesionSts : 48|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms7_UnderSOCSts : 45|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms7_OverSOCSts : 47|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms7_bSOC_JumpErr : 46|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms7_IsolSuperSts : 42|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_Currsensor_CommuErr : 39|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_CurrSampleErr : 38|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms7_OverChgCurrentSts : 37|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms_OverCurrentSts : 34|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bat_HighVol_loop_offErr : 31|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_bBattPack_MatchErr : 30|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms7_CellDiffSts : 29|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms7_DiffTempSts : 26|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_bDischg_loop_interlock_Fault : 22|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_OverVoltageSts : 21|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms7_CellOverVoltageSts : 18|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_bVolt_linebreakErr : 15|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_bBatTotalVolSampleBackErr : 14|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_UnderVoltageSts : 13|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms7_CellUnderVoltageSts : 10|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_bTemp_line_breakErr : 7|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_bTmalRunFlt : 6|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms7_CellOverTempSts : 5|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Bms7_CellUnderTempSts : 2|3@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 869 GW_EPS_1: 5 Vector__XXX
+ SG_ RecoverableFault : 6|5@0+ (1,0) [0|31] "" Vector__XXX
+ SG_ ESP1_FailSts : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 770 EAC_1: 8 Vector__XXX
+ SG_ EAC_OverLoadDropFrequeney : 58|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EAC_OverTempeDropFrequeney : 59|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EAC_LostCommunicationWithECC : 57|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EAC_InternalVoltFault : 56|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EAC_OverTempFault : 60|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EAC_OverPhaseECurrentFault : 61|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EAC_OverBusCurrFault : 62|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EAC_OverVoltFault : 63|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EAC_UnderVoltFault : 10|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EAC_IGBT_Temp : 55|8@0+ (1,-40) [-40|125] "" Vector__XXX
+ SG_ EAC_CompressorPower : 47|8@0+ (100,0) [0|4000] "A" Vector__XXX
+ SG_ EAC_Motor_PhaseCurr : 39|8@0+ (0.5,0) [0|50] "℃" Vector__XXX
+ SG_ EAC_WorkingMode : 9|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EAC_HV_InputCurr : 31|8@0+ (0.5,0) [0|50] "A" Vector__XXX
+ SG_ EAC_HV_InputVolt : 23|8@0+ (2,0) [0|500] "V" Vector__XXX
+ SG_ EAC_CompressorSpd : 7|8@0+ (100,0) [1000|6000] "rpm" Vector__XXX
+
+BO_ 1120 GW_VCU_3: 8 VCU
+ SG_ VCU_bHandBrakeSts : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_3_DriveMode : 62|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_3_stTBOX_Limit : 43|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_3_StSmartCharge : 63|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_3_Faultcode : 55|8@0+ (1,0) [0|40] "" Vector__XXX
+ SG_ VCU_3_VechileSts : 7|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ VCU_3_HvEmgy_St : 4|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_3_DCDC_St : 2|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_3_VCUControl : 1|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_3_AliveCounter : 59|4@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1027 GW_VCU_1: 8 VCU
+ SG_ VCU_1_bVacuumPumpSysFailure : 47|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_1_GearboxPositionDisplay : 3|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ VCU_1_MInvertorFaultWarnLightSts : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_1_SystemWarningLightSts : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_1_PowerBattFaultWarnLightSts : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_1_MInvertorOTWarnLightSts : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_1_SOCWarningLightSts : 11|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_1_READYLightSts : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_1_MaintainLightSts : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_1_Battery12V_Fault : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_1_SystemFaultsWarnLightSts : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_1_VehicleSpeedVSOSig : 10|13@0+ (0.0625,0) [0|511.9375] "Km/h" Vector__XXX
+ SG_ VCU_1_ResidualOdometer : 29|14@0+ (0.1,0) [0|1638.3] "km" Vector__XXX
+ SG_ VCU_1_Brake_state : 40|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_1_InstPowerConsum : 63|8@0+ (0.196,0) [0|49.98] "KWH/100KM" Vector__XXX
+ SG_ VCU_1_GasPedalPosition : 55|8@0+ (0.392,0) [0|99.99] "%" Vector__XXX
+
+BO_ 1024 GW_VCU_2: 8 VCU
+ SG_ VCU_stPUPDSts : 29|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VCU_bAntiSkid : 43|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_2_ChargeAllow : 40|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCU_2_TorqueCommand : 7|16@0+ (0.1,-2000) [-2000|4553.5] "Nm" Vector__XXX
+ SG_ VCU_2_MCUEnable : 37|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_2_BatteryState : 39|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_2_MCU_ActiveDiscargeCmd : 44|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_2_MCU_PowerOff : 45|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_2_DCDC_stCtrlReq : 47|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_2_DCDC_TargetVoltage : 63|8@0+ (0.1,0) [0|25.5] "V" Vector__XXX
+ SG_ VCU_2_MCUModeCommand : 36|5@0+ (1,0) [0|31] "" Vector__XXX
+
+BO_ 512 GW_VCU_4: 8 VCU
+ SG_ VCU_InterlockSts : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VCU_CLM_stPtc : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_6_MotorMaxPower : 43|10@0+ (1,-511) [-511|512] "kw" Vector__XXX
+ SG_ VCU_6_AvailResidPower : 37|10@0+ (1,-511) [-511|512] "kw" Vector__XXX
+ SG_ VCU_6_InstantPower : 31|10@0+ (1,-511) [-511|512] "kw" Vector__XXX
+ SG_ VCU_6_EAC_Power_lim : 23|8@0+ (0.04,0) [0|10.2] "kw" Vector__XXX
+ SG_ VCU_6_EAC_drive_request : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1040 GW_MCU_1: 8 Vector__XXX
+ SG_ MCU_1_Speed_Vechile : 7|16@0+ (0.1,-200) [-200|6353.5] "KM/H" Vector__XXX
+ SG_ MCU_1_MotorSpeed : 23|16@0+ (1,-20000) [-12000|12000] "rpm" Vector__XXX
+ SG_ MCU_1_ControllerTorque : 39|16@0+ (0.1,-2000) [-300|300] "Nm" Vector__XXX
+ SG_ MCU_1_MCUTemperture : 55|8@0+ (1,-40) [-40|210] "℃" Vector__XXX
+ SG_ MCU_1_MoterTemperture : 63|8@0+ (1,-40) [-40|215] "C" Vector__XXX
+
+BO_ 745 GW_ABS_1: 8 Vector__XXX
+ SG_ EBDActive : 61|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ABS_1_EBDFailSts : 1|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ABS_1_ABSFailSts : 5|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ABS_1_VehicleSpeedVSOSig : 28|13@0+ (0.0625,0) [0|512] "km/h" Vector__XXX
+ SG_ ABS_1_VSpeedVSOSigValidData : 30|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ABS_1_ABSActive : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 889 DCDC1: 8 Vector__XXX
+ SG_ DCDC_InputCurrent : 60|5@0+ (1,0) [0|16] "A" Vector__XXX
+ SG_ DCDC_faultlevel : 63|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ DCDC_InputVoltage : 41|10@0+ (1,0) [0|1022] "V" Vector__XXX
+ SG_ DCDC_OutVoltage : 39|8@0+ (0.1,0) [0|25.5] "V" Vector__XXX
+ SG_ DCDC_UnderIV : 2|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCDC_RealityTemp : 31|8@0+ (1,-40) [-40|120] "℃" Vector__XXX
+ SG_ DCDC_OutCurrent : 11|12@0+ (0.1,0) [0|250] "A" Vector__XXX
+ SG_ DCDC_Derating : 12|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCDC_UnderOV : 13|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCDC_OverOV : 14|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCDC_OverOC : 15|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCDC_OverTemp : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCDC_stsError : 1|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCDC_OverIV : 3|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCDC_CANError : 4|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DCDC_OperatingMode : 7|2@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1129 GW_BMS_1: 8 Vector__XXX
+ SG_ BMS_1_ElectWireCnctLightSts : 55|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_1_PowerBattDisconnectWarni : 53|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_1_MAXChargeCurrent : 23|16@0+ (0.05,-1600) [0|600] "A" Vector__XXX
+ SG_ Bms_1_MaxDischargeCurrent : 7|16@0+ (0.05,-1600) [0|600] "A" Vector__XXX
+ SG_ BMS_1_PowerBattMaintainLightReq : 52|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_1_StateOfCharge : 39|16@0+ (0.01,0) [0|100] "%" Vector__XXX
+
+BO_ 1131 GW_BMS_3: 8 Vector__XXX
+ SG_ Bms_2_BatteryCurrent : 7|16@0+ (0.05,-1600) [-600|600] "A" Vector__XXX
+ SG_ BMS_2_AverageBattTemp : 55|8@0+ (1,-40) [-40|125] "C" Vector__XXX
+ SG_ BMS_2_StateOfHealth : 63|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ BMS_2_BatteryVoltage : 23|16@0+ (0.05,0) [0|1000] "V" Vector__XXX
+
+
+
+EV_ Var_GasPedalPosition: 0 [0|256] "" 0 1 DUMMY_NODE_VECTOR3  VCU;
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 VCU2BMS_CtrHighVol "VCU 对BMS 发送的高压上下电指令VCU 对BMS 发送的高压上下电指令";
+CM_ SG_ 3221225472 VCUDCDC_Status "VCU上报DCDC状态VCU上报DCDC状态";
+CM_ SG_ 3221225472 VCUHvEmgy_Status "VCU紧急下电请求状态VCU紧急下电请求状态";
+CM_ SG_ 3221225472 VCUVechileSts "车辆状态车辆状态";
+CM_ SG_ 3221225472 VCU2MCU_Skid "防溜坡指令防溜坡指令";
+CM_ SG_ 3221225472 VCU_1_CrashOutputSts "碰撞信号碰撞信号";
+CM_ SG_ 3221225472 VCU_1_Remote_EAC_COMFault "远程空调通讯错误远程空调通讯错误";
+CM_ SG_ 3221225472 VCU_1_Remote_EAC_SystemFault "远程空调系统故障远程空调系统故障";
+CM_ SG_ 3221225472 VCU_2_SpeedCommand "目标速度目标速度";
+CM_ SG_ 3221225472 VCU_6_EAC_target_speed "VCU2 EAC转速目标VCU2 EAC转速目标";
+CM_ SG_ 3221225472 MCU_3_IGBT_Ready "MCU高压系统准备完毕MCU高压系统准备完毕";
+CM_ SG_ 3221225472 MCU4__MaxAvailPower "电机当前工况最大可用功率";
+CM_ SG_ 3221225472 MCU_2_DC_link_Voltage "MCU直流母线端电压MCU直流母线端电压";
+CM_ SG_ 3221225472 MCU_2_DC_link_Current "MCU直流母线端电流MCU直流母线端电流";
+CM_ SG_ 3221225472 MCU_2_AC_Valid "三相交流有效值三相交流有效值";
+CM_ SG_ 3221225472 MCU_2_MAXTorque "MCU最大允许扭矩MCU最大允许扭矩";
+CM_ SG_ 3221225472 MCU_3_Moter_ERRNum "电机控制器总故障数电机控制器总故障数";
+CM_ SG_ 3221225472 MCU_bTempSensor_Error "MCU允许下电MCU允许下电";
+CM_ SG_ 3221225472 MCU_3_MCU_St_Work "MCU自检MCU自检";
+CM_ SG_ 3221225472 MCU_3_Fault_Grade "MCU故障等级MCU故障等级";
+CM_ SG_ 3221225472 MotorAllowMAXSpeed "电机最大允许转速电机最大允许转速";
+CM_ SG_ 3221225472 BMS_6_BMSSts "BMS自检BMS自检";
+CM_ SG_ 3221225472 BMS_6_workingMode "BMS工作状态BMS工作状态";
+CM_ SG_ 796 ABM_1_CheckSum "((Byte0+Byte1+ Byte3) AND 0xFF) XOR 0xFF";
+CM_ SG_ 796 ABM_1_CrashOutputSts "Crash 信号是按照bit 表示状态的:
+若同时有多个方向发生碰撞，则代表各方向的各个碰撞标志位均会被置1.
+例如左碰叠加右碰，那么输出的信号是 00001100.";
+CM_ SG_ 796 ABM_1_MessageCounter "Rolling message counter";
+CM_ SG_ 796 ABM_1_PsngrSeatBeltWarning "副驾安全带状态";
+CM_ SG_ 796 ABM_1_DrvSeatBeltRSt "主驾安全带状态
+";
+CM_ SG_ 796 ABM1_AirBagFailSts "气囊报警灯自检策略如下：
+上电后，ABM 发信号点亮气囊灯。
+ABM 上电自检：
+上电自检5.6s~10s 内，发11；
+5.6s~10s 后，发00/10。
+01：闪亮预留，当控制器出厂后";
+CM_ SG_ 1137 OBC_HighVoltOutputOverVolt "充电机温度状态";
+CM_ SG_ 1027 VCU_1_bVacuumPumpSysFailure "真空泵系统故障";
+CM_ SG_ 1027 VCU_1_GearboxPositionDisplay "VCU档位信息VCU档位信息";
+CM_ SG_ 1027 VCU_1_MInvertorFaultWarnLightSts "电驱动系统故障指示灯电驱动系统故障指示灯";
+CM_ SG_ 1027 VCU_1_SystemWarningLightSts "系统报警指示灯系统报警指示灯";
+CM_ SG_ 1027 VCU_1_PowerBattFaultWarnLightSts "动力蓄电池故障报警指示灯动力蓄电池故障报警指示灯";
+CM_ SG_ 1027 VCU_1_MInvertorOTWarnLightSts "电机及控制器过热报警指示电机及控制器过热报警指示";
+CM_ SG_ 1027 VCU_1_SOCWarningLightSts "动力电池电量低报警动力电池电量低报警";
+CM_ SG_ 1027 VCU_1_READYLightSts "整车Ready整车Ready";
+CM_ SG_ 1027 VCU_1_MaintainLightSts "动力系统保养指示灯动力系统保养指示灯";
+CM_ SG_ 1027 VCU_1_Battery12V_Fault "12V蓄电池充放电故障12V蓄电池充放电故障";
+CM_ SG_ 1027 VCU_1_SystemFaultsWarnLightSts "系统故障报警指示灯系统故障报警指示灯";
+CM_ SG_ 1027 VCU_1_VehicleSpeedVSOSig "车速车速";
+CM_ SG_ 1027 VCU_1_ResidualOdometer "续航里程续航里程";
+CM_ SG_ 1027 VCU_1_Brake_state "制动踏板状态制动踏板状态";
+CM_ SG_ 1027 VCU_1_InstPowerConsum "百公里耗电量百公里耗电量";
+CM_ SG_ 1024 VCU_stPUPDSts "上下电状态";
+CM_ SG_ 1024 VCU_bAntiSkid "防溜坡";
+CM_ SG_ 1024 VCU_2_TorqueCommand "扭矩请求命令扭矩请求命令";
+CM_ SG_ 1024 VCU_2_MCUEnable "VCU2MCU使能信号VCU2MCU使能信号";
+CM_ SG_ 1024 VCU_2_BatteryState "电池连接状态电池连接状态";
+CM_ SG_ 1024 VCU_2_MCU_ActiveDiscargeCmd "VCU对MCU发主动放电指令VCU对MCU发主动放电指令";
+CM_ SG_ 1024 VCU_2_MCU_PowerOff "VCU主动下电命令VCU主动下电命令";
+CM_ SG_ 1024 VCU_2_DCDC_TargetVoltage "DCDC目标电压DCDC目标电压";
+CM_ SG_ 512 VCU_InterlockSts "包外高压环路互锁故障";
+CM_ SG_ 512 VCU_6_MotorMaxPower "驱动系统最大功率";
+CM_ SG_ 512 VCU_6_AvailResidPower "驱动系统可用剩余功率";
+CM_ SG_ 512 VCU_6_InstantPower "驱动系统瞬时/回收功率";
+CM_ SG_ 512 VCU_6_EAC_Power_lim "VCU电动空调功率限制VCU电动空调功率限制";
+CM_ SG_ 1040 MCU_1_Speed_Vechile "MCU计算的车速MCU计算的车速";
+CM_ SG_ 1040 MCU_1_MotorSpeed "Motor电机转速Motor电机转速";
+CM_ SG_ 1040 MCU_1_ControllerTorque "MCU实际执行扭矩反馈MCU实际执行扭矩反馈";
+CM_ SG_ 1040 MCU_1_MCUTemperture "MCU控制器温度MCU控制器温度";
+CM_ SG_ 1040 MCU_1_MoterTemperture "Moter电机温度Moter电机温度";
+CM_ SG_ 745 ABS_1_ABSActive "ABS激活ABS激活";
+CM_ SG_ 889 DCDC_UnderIV "输入欠压";
+CM_ SG_ 889 DCDC_Derating "限功率";
+CM_ SG_ 889 DCDC_OverOV "输出过压";
+CM_ SG_ 889 DCDC_OverOC "输出过流";
+CM_ SG_ 889 DCDC_OverIV "输入过压";
+CM_ SG_ 1129 Bms_1_MaxDischargeCurrent "BMS最大允许放电电流BMS最大允许放电电流";
+CM_ SG_ 1129 BMS_1_PowerBattMaintainLightReq "动力电池保养请求动力电池保养请求";
+CM_ SG_ 1131 Bms_2_BatteryCurrent "BMS总电流BMS总电流";
+CM_ SG_ 1131 BMS_2_AverageBattTemp "电池平均温度电池平均温度";
+CM_ SG_ 1131 BMS_2_StateOfHealth "电池健康状态电池健康状态";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT -3.4E+038 3.4E+038;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_ "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 1313 100;
+BA_ "GenMsgCycleTime" BO_ 196 10;
+BA_ "GenMsgCycleTime" BO_ 796 500;
+BA_ "GenMsgCycleTime" BO_ 1283 20;
+BA_ "GenMsgCycleTime" BO_ 913 20;
+BA_ "GenMsgCycleTime" BO_ 1120 100;
+BA_ "GenMsgCycleTime" BO_ 1027 100;
+BA_ "GenMsgCycleTime" BO_ 1024 10;
+BA_ "GenMsgCycleTime" BO_ 1040 10;
+BA_ "GenMsgCycleTime" BO_ 745 10;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU2BMS_CtrHighVol 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCUDCDC_Status 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCUHvEmgy_Status 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCUVechileSts 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU2MCU_Skid 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Reserved1 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Reserved3 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Reserved2 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Reserved 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_1_CrashOutputSts 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_1_Remote_EAC_COMFault 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_1_Remote_EAC_SystemFault 0;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_2_SpeedCommand 20000;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_3_DCDC_Temp 48;
+BA_ "GenSigStartValue" SG_ 3221225472 VCU_6_EAC_target_speed 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MCU_3_IGBT_Ready 0;
+BA_ "GenSigStartValue" SG_ 3221225472 SteeringAngle 32768;
+BA_ "GenSigStartValue" SG_ 3221225472 MCU_AC_CInstantaneous 10000;
+BA_ "GenSigStartValue" SG_ 3221225472 MCU_AC_BInstantaneous 10000;
+BA_ "GenSigStartValue" SG_ 3221225472 MCU_AC_AInstantaneous 10000;
+BA_ "GenSigStartValue" SG_ 3221225472 MCU4__MaxAvailPower 511;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS34_BattTempSensorNum3 40;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS34_BattTempSensorNum2 40;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS34_BattTempSensorNum1 40;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS_4_LowestBattTemp 40;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS_4_HighestBattTemp 40;
+BA_ "GenSigStartValue" SG_ 3221225472 MCU_2_DC_link_Voltage 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MCU_2_DC_link_Current 10000;
+BA_ "GenSigStartValue" SG_ 3221225472 MCU_2_AC_Valid 32000;
+BA_ "GenSigStartValue" SG_ 3221225472 MCU_2_MAXTorque 20000;
+BA_ "GenSigStartValue" SG_ 3221225472 MCU_3_Moter_ERRNum 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MCU_bTempSensor_Error 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MCU_3_MCU_St_Work 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MCU_3_Fault_Grade 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MotorAllowMAXSpeed 20000;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS_6_BMSSts 0;
+BA_ "GenSigStartValue" SG_ 3221225472 BMS_6_workingMode 0;
+BA_ "GenSigStartValue" SG_ 896 DC1_AverageTemp 40;
+BA_ "GenSigStartValue" SG_ 896 NTC_AverageTemp 40;
+BA_ "GenSigStartValue" SG_ 408 EvaporatorTemperature 80;
+BA_ "GenSigStartValue" SG_ 408 PTC_Temp 40;
+BA_ "GenSigStartValue" SG_ 1393 OBC_Temp -0.4;
+BA_ "GenSigStartValue" SG_ 1139 OBC_ChrgPortTemp1 40;
+BA_ "GenSigStartValue" SG_ 1139 OBC_ChrgPortTemp2 40;
+BA_ "GenSigStartValue" SG_ 1394 OBC_ACInputVoltage 0;
+BA_ "GenSigStartValue" SG_ 1137 OBC_HighVoltOutputUnderVolt 0;
+BA_ "GenSigStartValue" SG_ 770 EAC_IGBT_Temp 40;
+BA_ "GenSigStartValue" SG_ 770 EAC_Motor_PhaseCurr 0;
+BA_ "GenSigStartValue" SG_ 1120 VCU_3_AliveCounter 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_GearboxPositionDisplay 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_MInvertorFaultWarnLightSts 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_SystemWarningLightSts 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_PowerBattFaultWarnLightSts 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_MInvertorOTWarnLightSts 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_SOCWarningLightSts 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_READYLightSts 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_MaintainLightSts 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_Battery12V_Fault 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_SystemFaultsWarnLightSts 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_VehicleSpeedVSOSig 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_ResidualOdometer 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_Brake_state 0;
+BA_ "GenSigStartValue" SG_ 1027 VCU_1_InstPowerConsum 0;
+BA_ "GenSigStartValue" SG_ 1024 VCU_2_TorqueCommand 20000;
+BA_ "GenSigStartValue" SG_ 1024 VCU_2_MCUEnable 0;
+BA_ "GenSigStartValue" SG_ 1024 VCU_2_BatteryState 0;
+BA_ "GenSigStartValue" SG_ 1024 VCU_2_MCU_ActiveDiscargeCmd 0;
+BA_ "GenSigStartValue" SG_ 1024 VCU_2_MCU_PowerOff 0;
+BA_ "GenSigStartValue" SG_ 1024 VCU_2_DCDC_stCtrlReq 0;
+BA_ "GenSigStartValue" SG_ 1024 VCU_2_DCDC_TargetVoltage 0;
+BA_ "GenSigStartValue" SG_ 1024 VCU_2_MCUModeCommand 0;
+BA_ "GenSigStartValue" SG_ 512 VCU_6_MotorMaxPower 511;
+BA_ "GenSigStartValue" SG_ 512 VCU_6_AvailResidPower 511;
+BA_ "GenSigStartValue" SG_ 512 VCU_6_InstantPower 511;
+BA_ "GenSigStartValue" SG_ 512 VCU_6_EAC_Power_lim 0;
+BA_ "GenSigStartValue" SG_ 1040 MCU_1_Speed_Vechile 2000;
+BA_ "GenSigStartValue" SG_ 1040 MCU_1_MotorSpeed 20000;
+BA_ "GenSigStartValue" SG_ 1040 MCU_1_ControllerTorque 20000;
+BA_ "GenSigStartValue" SG_ 1040 MCU_1_MCUTemperture 40;
+BA_ "GenSigStartValue" SG_ 1040 MCU_1_MoterTemperture 40;
+BA_ "GenSigStartValue" SG_ 745 ABS_1_ABSActive 0;
+BA_ "GenSigStartValue" SG_ 889 DCDC_RealityTemp 40;
+BA_ "GenSigStartValue" SG_ 1129 BMS_1_MAXChargeCurrent 32000;
+BA_ "GenSigStartValue" SG_ 1129 Bms_1_MaxDischargeCurrent 32000;
+BA_ "GenSigStartValue" SG_ 1129 BMS_1_PowerBattMaintainLightReq 0;
+BA_ "GenSigStartValue" SG_ 1131 Bms_2_BatteryCurrent 32000;
+BA_ "GenSigStartValue" SG_ 1131 BMS_2_AverageBattTemp 40;
+BA_ "GenSigStartValue" SG_ 1131 BMS_2_StateOfHealth 0;
+VAL_ 3221225472 VCU2BMS_CtrHighVol 0 "DCDC_OK" 1 "DCDC_NotOK" ;
+VAL_ 3221225472 VCU_1_CrashOutputSts 1 "Crash" 0 "No crash" ;
+VAL_ 3221225472 VCU_1_Remote_EAC_COMFault 1 "Fault present" 0 "Fault not present" ;
+VAL_ 3221225472 VCU_1_Remote_EAC_SystemFault 1 "Fault present" 0 "Fault not present" ;
+VAL_ 3221225472 VCU_3_ECO_Sts 1 "ON" 0 "OFF" ;
+VAL_ 3221225472 VCU_3_MCU_Skid 1 "valid" 0 "invalid" ;
+VAL_ 3221225472 VCU_3_VCU_Failure 3 "Invalid" 2 "Error" 1 "Fail" 0 "No Fail" ;
+VAL_ 3221225472 OBC_Low12VStatus 1 "Enable " 0 "Disable/Startup " ;
+VAL_ 3221225472 OBC_SystemSts 6 "Lock Fault " 5 "Recover Fault " 4 "Sleep" 3 "Charge Over " 2 "Charging " 1 "Standby " 0 "initialization" ;
+VAL_ 3221225472 DriverDoorSts 1 "Open" 0 "Close" ;
+VAL_ 3221225472 MCU_3_IGBT_Ready 1 "Ready" 0 "Not Ready" ;
+VAL_ 3221225472 BMS_6_NegBattContSts 3 "Reserved" 2 "Reserved" 1 "Connect" 0 "Disconnect" ;
+VAL_ 3221225472 ABS_1_EbdPresent 1 "Fitted" 0 "Not fitted" ;
+VAL_ 3221225472 ABS_1_EbdWlSts 1 "EBD Warning lamp ON" 0 "EBD Warning lamp OFF" ;
+VAL_ 3221225472 ABS_1_EspWlSts 1 "ESP Warning lamp ON" 0 "ESP Warning lamp OFF" ;
+VAL_ 3221225472 ABS_1_ABSPresent 1 "Fitted" 0 "Not fitted" ;
+VAL_ 3221225472 ABS_1_ABSWLSts 1 "ABS Warning lamp ON" 0 "ABS Warning lamp OFF" ;
+VAL_ 3221225472 ActiveLoadMaster 1 "active" 0 "No active" ;
+VAL_ 3221225472 NetworkCommand 3 "Multimaster" 2 "S" 1 "SA" 0 "WU" ;
+VAL_ 3221225472 SteeringAngleValidData 1 "Not Valid" 0 "Valid" ;
+VAL_ 3221225472 SASCalibrated 1 "Calibrated" 0 "Not calibrated" ;
+VAL_ 3221225472 SASInit 1 "Initialized" 0 "Not Initialized" ;
+VAL_ 3221225472 ABS_2_RRWheelSpeedValidData 1 "Not valid" 0 "Valid" ;
+VAL_ 3221225472 ABS_2_RLWheelSpeedValidData 1 "Not valid" 0 "Valid" ;
+VAL_ 3221225472 ABS_2_FRWheelSpeedValidData 1 "Not valid" 0 "Valid" ;
+VAL_ 3221225472 ABS_2_FLWheelSpeedValidData 1 "Not valid" 0 "Valid" ;
+VAL_ 3221225472 MCU_bModeError 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_PhaseCurrent_drift 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_bInverterOvertemp 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_bPhase_LowVol_H 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_bPhase_LowVol_L 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_HSBiasAlarm 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_bOverSpeed_L 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_bOverVol_Err 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_bsoftCurrent_Err 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_ActiveDischgErr 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_bLosePhase_Err 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_Phase_OverVol_High 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_Phase_OverVol_low 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_MotorResolverErr 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_HW_LV_Err 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_HW_OV_Err 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_HW_OI_Err 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_IGBT_Err 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_MCUMode 26 "reverse drive mode" 18 "forward drive mode" 11 "discharge mode" 10 "brake mode" 3 "speed mode" 2 "zero torque mode" 1 "fail mode" 0 "off mode" ;
+VAL_ 3221225472 MCU_3_Driver_bLV 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_bMotorOverTemp 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_Bus_Err 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_Motor_St 7 "error" 4 "ready" 3 "shut off" 2 "producting current" 1 "expending current" 0 "Invalid" ;
+VAL_ 3221225472 MCU_bTempSensor_Error 1 "fault" 0 "No fault" ;
+VAL_ 3221225472 MCU_3_MCU_St_Work 8 "保留" 7 "下高压状态" 6 "限功率状态" 5 "保留" 4 "保留" 3 "高压" 2 "准备状态" 1 "复位后默认状态" 0 "/" ;
+VAL_ 3221225472 MCU_3_Fault_Grade 0 "正常" 1 "故障等级1" 2 "故障等级2" 3 "故障等级3" ;
+VAL_ 3221225472 BMS_6_SmaChrgReq 1 "Request" 0 "No Request" ;
+VAL_ 3221225472 BMS_PTCSts 3 "Reserved" 2 "Error" 1 "Connect" 0 "Disconnect" ;
+VAL_ 3221225472 BMS_6_InterlockSts 1 "Manfunciton" 0 "Normal" ;
+VAL_ 3221225472 BMS_6_BattContFail 1 "Manfunciton" 0 "Normal" ;
+VAL_ 3221225472 BMS_6_ChgMode_for_TBOX 4 "充电完成" 3 "未充电" 2 "行驶充电" 1 "停车充电" 0 "startup/Default" ;
+VAL_ 3221225472 BMS_6_RunMode_for_TBOX 1 "ON" 0 "OFF" ;
+VAL_ 3221225472 BMS_6_ChgFault_Grade 4 "Grade 4" 3 "Grade 3" 2 "Grade 2" 1 "Grade 1" 0 "Default" ;
+VAL_ 3221225472 BMS_6_DisChgfault_Grade 4 "Grade 4" 3 "Grade 3" 2 "Grade 2" 1 "Grade 1" 0 "Default" ;
+VAL_ 3221225472 BMS_6_PrechargeContSts 3 "Reserved" 2 "Reserved" 1 "Connect" 0 "Disconnect" ;
+VAL_ 3221225472 BMS_6_PrechargeSts 3 "PrechargeFailed" 2 "PrechargeSuccess" 1 "Precharging" 0 "Disconnect" ;
+VAL_ 3221225472 BMS_6_PosBattContSts 3 "Reserved" 2 "Reserved" 1 "Connect" 0 "Disconnect" ;
+VAL_ 3221225472 BMS_6_BMSSts 3 "Reserved" 2 "Reserved" 1 "Ready" 0 "Not ready" ;
+VAL_ 3221225472 BMS_6_workingMode 9 "charge heating" 8 "charge finish" 7 "Charging（停车充电）" 6 "Sleep(进入休眠)" 5 "DataWriting （低压下电）" 4 "ShutDown(高压下电)" 3 "Driving（放电行驶）" 2 "Precharging（预充中）" 1 "Waiting（自检完成）" 0 "Initialing(上电自检)" ;
+VAL_ 3221225472 EAC1_OPower_DecreaseSpeed_Fault 1 "True" 0 "False/Startup" ;
+VAL_ 3221225472 EAC1_OPower_Fault 1 "True" 0 "False/Startup" ;
+VAL_ 796 ABM_1_CrashOutputSts 10 "Rear Crash" 8 "Right Side Crash" 4 "Left Side Crash" 2 "Front Crash" 1 "Belt Crash" 0 "No Crash" ;
+VAL_ 796 ABM_1_MessageCounter 15 "Range High" 0 "Range Low" ;
+VAL_ 796 ABM_1_PsngrSeatBeltWarning 3 "Not Used" 2 "Warning" 1 "Reserve" 0 "Not Warning" ;
+VAL_ 796 ABM_1_DrvSeatBeltRSt 3 "Not Used" 2 "Warning" 1 "Reserve" 0 "No warning" ;
+VAL_ 796 ABM1_AirBagFailSts 3 "Lamp on, but no warning" 2 "Fail present, lamp on" 1 "Fail no present, lamp flashing" 0 "Fail no present, lamp off" ;
+VAL_ 896 DC1_WorkingMode 4 "Sleep" 3 "fault" 2 "charge finish" 1 "charging" 0 "Standby" ;
+VAL_ 896 DC1_Faultcode 4 "DC电源故障" 3 "DC电源与BMS控制板通信故障" 2 "Bms控制板主板故障" 1 "Bms控制板can通信故障" 0 "无故障" ;
+VAL_ 896 DC1_ChgConnectSts 1 "Connect" 0 "Disconnect" ;
+VAL_ 896 DC1_PDUSts 1 "Connect" 0 "Disconnect" ;
+VAL_ 1554 CurrentFailSts 1 "failIsPresentinTheSystemMemory" 0 "No functional fail is present" ;
+VAL_ 1554 ActiveLoadMaster 1 "Active loads in master" 0 "No active loads in master" ;
+VAL_ 1554 NCNetworkCommand 3 "Multimaster" 2 "Not Used" 1 "SA" 0 "WU" ;
+VAL_ 916 AlarmMode 5 "后备箱释放模式" 4 "设防失效模式" 3 "解除非法闯入模式" 2 "非法闯入模式" 1 "设防模式" 0 "解防模式" ;
+VAL_ 916 Arming_Failed 7 "电源不工作于OFF" 3 "后背门开" 2 "右前车门开" 1 "左前车门开" 0 "不工作" ;
+VAL_ 916 FR_WIN_Postion 3 "Open-80%" 2 "80%-Close" 1 "Open" 0 "Closed" ;
+VAL_ 916 FL_WIN_Postion 3 "Open-80%" 2 "80%-Close" 1 "Open" 0 "Closed" ;
+VAL_ 1088 RADAR_RadarWorkSts 1 "Active" 0 "Not Active" ;
+VAL_ 1088 RADAR_RadarDetectSts 2 "Rear Radar detecting" 1 "Front Radar detecting" 0 "No detecting" ;
+VAL_ 1088 RADAR_AudibleBeepRate 4 "1Hz" 3 "		2Hz" 2 "4Hz" 1 "On" 0 "Off" ;
+VAL_ 1553 ActiveLoadMaster 1 "active" 0 "No active" ;
+VAL_ 1553 NetworkCommand 3 "Multimaster" 2 "S" 1 "SA" 0 "WU" ;
+VAL_ 1556 ActiveLoadMaster 1 "active" 0 "No active" ;
+VAL_ 1556 NetworkCommand 3 "Multimaster" 2 "S" 1 "SA" 0 "WU" ;
+VAL_ 408 FaultCode8 1 "故障" 0 "正常" ;
+VAL_ 408 FaultCode7 1 "故障" 0 "正常" ;
+VAL_ 408 FaultCode6 1 "故障" 0 "正常" ;
+VAL_ 408 FaultCode5 1 "故障" 0 "正常" ;
+VAL_ 408 FaultCode4 1 "故障" 0 "正常" ;
+VAL_ 408 FaultCode3 1 "故障" 0 "正常" ;
+VAL_ 408 FaultCode2 1 "故障" 0 "正常" ;
+VAL_ 408 PTCState 3 "Grade 3" 2 "Grade 2" 1 "Grade 1" 0 "OFF" ;
+VAL_ 408 CLM_EACReq 1 "ON" 0 "OFF" ;
+VAL_ 1573 ActiveLoadMaster 1 "active" 0 "No active" ;
+VAL_ 1573 NetworkCommand 3 "Multimaster" 2 "S" 1 "SA" 0 "WU" ;
+VAL_ 1536 ActiveLoadMaster 1 "active" 0 "No active" ;
+VAL_ 1536 NetworkCommand 3 "Multimaster" 2 "S" 1 "SA" 0 "WU" ;
+VAL_ 1283 DangerousTirePressureWarning 2 "TPMS Dangerous Warning" 1 "TPMS no Dangerous Warning" 0 "No TPMS Warning" ;
+VAL_ 1283 TPMS_ResetStatus 3 "Reset Finished" 2 "Reset Failed" 1 "Reset On-going" 0 "Startup/Default" ;
+VAL_ 1283 TPMS_MalfunctionStatus 1 "TPMS Malfunction" 0 "TPMS no Malfunction" ;
+VAL_ 1283 TPMS_DeflatedtirePosition 15 "多轮欠压" 9 "请检查轮胎压力" 8 "右后轮欠压" 4 "左后轮欠压" 2 "右前轮欠压" 1 "左前轮欠压" 0 "/" ;
+VAL_ 1283 TPMS_WarningStatus 1 "TPMS Warning" 0 "No TPMS Warning" ;
+VAL_ 1282 ABS_1_VSpeedVSOSigValidData 1 "Not valid" 0 "Valid" ;
+VAL_ 1282 ABS_1_EBDFailSts 1 "Fail present (lamp on)" 0 "Not present" ;
+VAL_ 1282 ABS_1_ABSFailSts 1 "Fail present (lamp on)" 0 "Not present" ;
+VAL_ 1393 OBC_CP_Sts 2 "error" 1 "normal" 0 "default/startup" ;
+VAL_ 913 PosSwitchSts 1 "ON" 0 "OFF" ;
+VAL_ 913 PosLightOnWarning 1 "Active" 0 "Off" ;
+VAL_ 913 FrontFogLightSts 1 "Active" 0 "Off" ;
+VAL_ 913 TrumpetSts 1 "Active" 0 "Off" ;
+VAL_ 913 Trunk_BackDoor_Sts 1 "Open" 0 "Close" ;
+VAL_ 913 LHRdoorSts 1 "Open" 0 "Close" ;
+VAL_ 913 RHRDoorSts 1 "Open" 0 "Close" ;
+VAL_ 913 PsngrDoorLockSts 1 "Open" 0 "Close" ;
+VAL_ 913 TrunkDoorLockSts 1 "Unlock" 0 "Lock" ;
+VAL_ 913 DRLSts 1 "Active" 0 "Off" ;
+VAL_ 913 LowBeamSts 1 "Active" 0 "Off" ;
+VAL_ 913 HighBeamSts 1 "Active" 0 "Off" ;
+VAL_ 913 PosLightSts 1 "Active" 0 "Off" ;
+VAL_ 913 LHTurnlightSts 1 "Active" 0 "Off" ;
+VAL_ 913 RHTurnlightSts 1 "Active" 0 "Off" ;
+VAL_ 913 KeyPrtBuzzCmd 1 "Active" 0 "Off" ;
+VAL_ 913 ParkLightOnWarning 1 "Active" 0 "Off" ;
+VAL_ 913 BCM_1KeySts 3 "START" 2 "ON" 1 "ACC" 0 "OFF" ;
+VAL_ 913 DriverDoorLockSts 1 "Unlock" 0 "Lock" ;
+VAL_ 913 PsngrDoorSts 1 "Open" 0 "Close" ;
+VAL_ 913 DriverDoorSts 1 "Open" 0 "Close" ;
+VAL_ 1139 OBC_S2Sts 1 "Close" 0 "Open" ;
+VAL_ 1139 OBC_BMSWakeSts 1 "Enable " 0 "Disable/Startup" ;
+VAL_ 1139 OBC_FaultLevel 4 "4 level fault" 3 "3 level fault" 2 "2 level fault" 1 "1 level fault" 0 "0 level fault" ;
+VAL_ 1139 OBC_CC_Sts 3 "Connect" 4 "CC to GND" 2 "Half Connect" 1 "No Connect" ;
+VAL_ 1394 OBC_ErrorFlag 11 "电磁锁故障" 10 "输出过压" 9 "输出欠压" 8 "PFC欠压" 7 "PFC过压" 6 "输入过压" 5 "输入欠压" 4 "通讯超时" 3 "输出过流" 2 "内部温度过温" 1 "充电口温度过温" ;
+VAL_ 1136 BMS_9_12vOutputDisable 1 "Disable" 0 "Enable" ;
+VAL_ 1136 BMS_9_RequestOutputMode 3 "Reserved" 2 "Heating" 1 "charging" 0 "Disconnect" ;
+VAL_ 1072 DriverSeatBeltWarningSts 1 "Warning" 0 "Not warning" ;
+VAL_ 1137 OBC_NoBattery 1 "fault" 0 "no fault/startup" ;
+VAL_ 1137 OBC_FanFault 1 "fault" 0 "no fault/startup" ;
+VAL_ 1137 OBC_CANMsgFault 1 "fault" 0 "no fault/startup" ;
+VAL_ 1137 OBC_HighCurrOutputFault 1 "fault" 0 "no fault/startup" ;
+VAL_ 1137 OBC_HighVoltOutputUnderVolt 1 "Fault" 0 "Not fault" ;
+VAL_ 1137 OBC_State 6 "Sleep" 5 "Heating" 4 "ChagerFault" 3 "Charge Over" 2 "Charging" 1 "Standby" 0 "Initalization" ;
+VAL_ 1137 OBC_HighVoltOutputShortCircuit 1 "fault" 0 "no fault/startup" ;
+VAL_ 1137 OBC_InputUnderVolt 1 "Fault" 0 "Not fault" ;
+VAL_ 1137 OBC_HighVoltOutputOverVolt 1 "Fault" 0 "Not fault" ;
+VAL_ 1137 OBC_InputOverVolt 1 "Fault" 0 "Not fault" ;
+VAL_ 1137 OBC_OverTemp 2 "Over Temperature 2 " 1 "Over Temperature 1 " 0 "Not fault " ;
+VAL_ 1135 BMS_bPowerSupplyLowErr 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS_bPowerSupplyHighErr 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS7_bMainSwitchBreakErr 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS7_SingleHeat_timeout 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS_bCarStorePowerOverCurr 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS7_VCU_CAN_FAILED 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS_bCanBusoff 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS_bHeatrelayAdhesionSts 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS_bPrerelayAdhesionSts 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS_bMainRelayAdhesionSts 1 "故障" 0 "正常" ;
+VAL_ 1135 Bms7_UnderSOCSts 4 "四级故障" 3 "三级故障" 2 "二级故障" 1 "一级故障" 0 "正常" ;
+VAL_ 1135 Bms7_OverSOCSts 1 "故障" 0 "正常" ;
+VAL_ 1135 Bms7_bSOC_JumpErr 1 "故障" 0 "正常" ;
+VAL_ 1135 Bms7_IsolSuperSts 4 "四级故障" 3 "三级故障" 2 "二级故障" 1 "一级故障" 0 "正常" ;
+VAL_ 1135 BMS_Currsensor_CommuErr 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS_CurrSampleErr 1 "故障" 0 "正常" ;
+VAL_ 1135 Bms7_OverChgCurrentSts 4 "四级故障" 3 "三级故障" 2 "二级故障" 1 "一级故障" 0 "正常" ;
+VAL_ 1135 Bms_OverCurrentSts 4 "四级故障" 3 "三级故障" 2 "二级故障" 1 "一级故障" 0 "正常" ;
+VAL_ 1135 Bat_HighVol_loop_offErr 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS_bBattPack_MatchErr 1 "故障" 0 "正常" ;
+VAL_ 1135 Bms7_CellDiffSts 4 "四级故障" 3 "三级故障" 2 "二级故障" 1 "一级故障" 0 "正常" ;
+VAL_ 1135 Bms7_DiffTempSts 4 "四级故障" 3 "三级故障" 2 "二级故障" 1 "一级故障" 0 "正常" ;
+VAL_ 1135 BMS_bDischg_loop_interlock_Fault 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS_OverVoltageSts 4 "四级故障" 3 "三级故障" 2 "二级故障" 1 "一级故障" 0 "正常" ;
+VAL_ 1135 Bms7_CellOverVoltageSts 4 "四级故障" 3 "三级故障" 2 "二级故障" 1 "一级故障" 0 "正常" ;
+VAL_ 1135 BMS_bVolt_linebreakErr 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS_bBatTotalVolSampleBackErr 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS_UnderVoltageSts 4 "四级故障" 3 "三级故障" 2 "二级故障" 1 "一级故障" 0 "正常" ;
+VAL_ 1135 Bms7_CellUnderVoltageSts 4 "四级故障" 3 "三级故障" 2 "二级故障" 1 "一级故障" 0 "正常" ;
+VAL_ 1135 BMS_bTemp_line_breakErr 1 "故障" 0 "正常" ;
+VAL_ 1135 BMS_bTmalRunFlt 1 "故障" 0 "正常" ;
+VAL_ 1135 Bms7_CellOverTempSts 4 "四级故障" 3 "三级故障" 2 "二级故障" 1 "一级故障" 0 "正常" ;
+VAL_ 1135 Bms7_CellUnderTempSts 4 "四级故障" 3 "三级故障" 2 "二级故障" 1 "一级故障" 0 "正常" ;
+VAL_ 869 RecoverableFault 3 "Both DTC present" 2 "ECU don't perform ASPCalibration" 1 "ECU temperaturetoo high" 0 "Default/Start up" ;
+VAL_ 869 ESP1_FailSts 2 "Not Recoverable fault" 1 "Recoverable fault" 0 "No fault" ;
+VAL_ 770 EAC_WorkingMode 3 "Invalid" 2 "Power Limit" 1 "ON" 0 "OFF/Startup" ;
+VAL_ 1120 VCU_bHandBrakeSts 1 "ON" 0 "OFF" ;
+VAL_ 1120 VCU_3_stTBOX_Limit 3 "Reserved" 2 "TBOX CAN_ERR" 1 "TBOX Limit" 0 "NO TBOX Limit" ;
+VAL_ 1120 VCU_3_Faultcode 53 "刹车故障" 52 "单个制动开关故障" 51 "与 ABM 通讯丢失" 50 "与 BCM 通讯丢失" 49 "与 OBC 通讯丢失" 48 "与 EAC 通讯丢失" 47 "水泵驱动故障" 46 "风扇驱动故障" 45 "与 ICM 通信丢失" 44 "TBOX 平台主动限速" 43 "车速故障" 42 "车速警告" 41 "换挡器故障" 40 "MCU 泄放超时" 39 "继电器断开超时" 38 "母线电流过大超时" 37 "快速重启超时" 36 "IGBT Ready 超时" 35 "主正闭合超时" 34 "预充超时" 33 "包外高压互锁故障" 32 "与 TBOX 通讯丢失" 31 "低压主继电器驱动故障" 30 "PTC 加热继电器驱动故障" 29 "DCDC 唤醒驱动故障" 28 "MCU 唤醒驱动故障" 27 "碰撞故障" 26 "真空系统故障" 25 "真空压力过小" 24 "真空压力传感器信号超下限" 23 "真空压力传感器信号超上限" 22 "真空压力传感器电源电压过低" 21 "真空压力传感器电源电压过高" 20 "蒸发皿温度传感器信号超下限" 19 "蒸发皿温度传感器信号超上限" 18 "油门踏板同步性故障" 17 "油门踏板2 信号超下限" 16 "油门踏板2 信号超上限" 15 "油门踏板1 信号超下限" 14 "油门踏板1 信号超上限" 13 "油门传感器2 电源电压过低" 12 "油门传感器2 电源电压过高" 11 "油门传感器1 电源电压过低" 10 "油门传感器1 电源电压过高" 9 "与 DCDC 通信丢失" 8 "与 ABS 通信丢失" 7 "与 BMS 通信丢失" 6 "与 MCU 通信丢失" 5 "CAN 总线 bus off" 4 "电瓶电压故障" 3 "整车三级故障" 2 "整车二级故障" 1 "整车一级故障" 0 "正常" ;
+VAL_ 1120 VCU_3_VechileSts 7 "Error" 3 "Other ST" 2 "Off" 1 "Start" 0 "Invalid" ;
+VAL_ 1120 VCU_3_HvEmgy_St 1 "Emergency" 0 "NO Emergency" ;
+VAL_ 1120 VCU_3_DCDC_St 1 "NOT OK" 0 "OK" ;
+VAL_ 1120 VCU_3_VCUControl 3 "Reserved" 2 "Reserved" 1 "Connect" 0 "Disconnect" ;
+VAL_ 1027 VCU_1_GearboxPositionDisplay 15 "Invalid" 14 "Reserved" 13 "Reverse" 12 "Neutral" 11 "Drive" ;
+VAL_ 1027 VCU_1_MInvertorFaultWarnLightSts 1 "ON" 0 "OFF" ;
+VAL_ 1027 VCU_1_SystemWarningLightSts 1 "ON" 0 "OFF" ;
+VAL_ 1027 VCU_1_PowerBattFaultWarnLightSts 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_ 1027 VCU_1_MInvertorOTWarnLightSts 1 "Lamp OFF" 0 "Lamp OFF" ;
+VAL_ 1027 VCU_1_SOCWarningLightSts 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_ 1027 VCU_1_READYLightSts 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_ 1027 VCU_1_MaintainLightSts 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_ 1027 VCU_1_Battery12V_Fault 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_ 1027 VCU_1_SystemFaultsWarnLightSts 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_ 1027 VCU_1_Brake_state 1 "Braking" 0 "Not braking" ;
+VAL_ 1024 VCU_stPUPDSts 63 "紧急下电时等待下低压" 62 "紧急放电" 61 " 紧急下电请求" 60 " VCU休眠" 55 " 下低压" 50 " 等待下低压" 45 " MCU 放电" 40 " 请求下高压" 35 " 附件下电" 31 " 快速上电" 30 " 等待车辆静止" 25 " 可行驶" 20 " 电池主正、主负吸合" 15 " 预充中" 10 " 请求上高压" 5 "上低压且等待上高压" 0 "初始化" ;
+VAL_ 1024 VCU_bAntiSkid 1 "Valid" 0 "InValid" ;
+VAL_ 1024 VCU_2_ChargeAllow 1 "Charge allowed" 0 "Charge forbidden" ;
+VAL_ 1024 VCU_2_MCUEnable 1 "Enable" 0 "Disable" ;
+VAL_ 1024 VCU_2_BatteryState 0 "未连接" 1 "预充电" 2 "连接" ;
+VAL_ 1024 VCU_2_MCU_ActiveDiscargeCmd 1 "Active" 0 "OFF" ;
+VAL_ 1024 VCU_2_MCU_PowerOff 1 "Power off" 0 "Power on" ;
+VAL_ 1024 VCU_2_DCDC_stCtrlReq 3 "Invalid" 2 "Reserved" 1 "Enable" 0 "Disable/Startup" ;
+VAL_ 1024 VCU_2_MCUModeCommand 26 "reverse drive mode" 18 "forward drive mode" 11 "discharge mode" 10 "brake mode" 3 "speed mode" 2 "zero torque mode" 1 "fail mode" 0 "off mode" ;
+VAL_ 512 VCU_InterlockSts 1 "Cut off the fault" 0 "Normal" ;
+VAL_ 512 VCU_CLM_stPtc 3 "三档" 2 "两档" 1 "一档" ;
+VAL_ 512 VCU_6_EAC_drive_request 3 "Invalid" 2 "Reserved" 1 "ON" 0 "OFF" ;
+VAL_ 745 EBDActive 1 "Active" 0 "Not active" ;
+VAL_ 745 ABS_1_EBDFailSts 1 "Fail present (lamp on)" 0 "Not present" ;
+VAL_ 745 ABS_1_ABSFailSts 1 "Fail present (lamp on)" 0 "Not present" ;
+VAL_ 745 ABS_1_VSpeedVSOSigValidData 1 "Not valid" 0 "Valid" ;
+VAL_ 745 ABS_1_ABSActive 1 "Active" 0 "Not active" ;
+VAL_ 889 DCDC_faultlevel 2 "2 level fault" 1 "1 level fault" 0 "0 level fault" ;
+VAL_ 889 DCDC_UnderIV 1 "Fault" 0 "No fault" ;
+VAL_ 889 DCDC_UnderOV 1 "Fault" 0 "No fault" ;
+VAL_ 889 DCDC_OverTemp 1 "Fault" 0 "No fault" ;
+VAL_ 889 DCDC_stsError 1 "Fault" 0 "No fault" ;
+VAL_ 889 DCDC_OverIV 1 "Fault" 0 "No fault" ;
+VAL_ 889 DCDC_CANError 1 "Fault" 0 "No fault" ;
+VAL_ 889 DCDC_OperatingMode 3 "Sleep" 2 "Error" 1 "Working" 0 "Standby" ;
+VAL_ 1129 BMS_1_ElectWireCnctLightSts 3 "reserved" 2 "FCM Connect" 1 "CM Connect" 0 "DisConnect/startup" ;
+VAL_ 1129 BMS_1_PowerBattDisconnectWarni 1 "Lamp ON" 0 "Lamp OFF" ;
+VAL_ 1129 BMS_1_PowerBattMaintainLightReq 1 "Maintain request" 0 "NO request" ;
+
